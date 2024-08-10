@@ -16,7 +16,7 @@ const Input = React.forwardRef(({ className, type, ...props }, ref) => {
         ref={ref}
         {...props}
       />
-      {props.icon ? (
+      {!props.icon ? (
         <Search className="absolute right-3 cursor-pointer w-5 h-5 text-orange" />
       ) : (
         <Button className="absolute right-0 bg-orange hover:bg-orange/90">Subscribe</Button>
