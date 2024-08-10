@@ -1,17 +1,30 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import React from "react";
-
+import React, { useState } from "react";
+import guideList from '../../../guide.json'
 const page = () => {
+      const [search, setSearch]=useState();
+      const [filteredList, setFilteredList]=useState([])
+      console.log(guideList)
+
+      const handleChange=(e)=>{
+            if(e.target.value.length<4) return;
+            const data=guideList.filter((guide)=>guide.currently_in.toLowerCase().includes(e.target.value.toLowerCase()))
+            console.log(data)
+            setFilteredList(data)
+            
+      }
   return (
     <main className="w-full px-10 relative h-[calc(100vh-100px)] bg-main-background">
       <div className="w-full flex justify-center items-center mt-5 pt-6">
         <Input
           type="text"
           placeholder="Search..."
-          className=" font-medium rounded-xl w-96 text-base"
-          icon
+          value={search}
+          onChange={handleChange}
+          className=" font-medium rounded-full w-96 text-base"
         />
       </div>
 
