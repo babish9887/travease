@@ -1,11 +1,25 @@
 "use client";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState , useEffect} from "react";
 import { Input } from "./ui/input";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
-
+import axios from "axios";
 const Navbar = () => {
+
+      const [user, setUser]=useState(null)
+
+      useEffect(()=>{
+            async function getUser(){
+                  await axios.get('/api/checkcookie')
+                  .then((res)=>{
+                        console.log(res.data)
+                        setUser(false)
+
+                  })
+            }
+            getUser()
+      },[user])
   const ref = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -71,13 +85,15 @@ const Navbar = () => {
             </Link>
 
             <div className="flex flex-col gap-2">
+                  <Link href='/user/login'>
               <Button
                 className="bg-orange text-white hover:bg-orange/80"
                 variant="secondary"
                 size="sm"
-              >
+                >
                 Sign in
               </Button>
+                  </Link>
               <Link href={'/newuser'}>
               <Button className="text-black" variant="ghost" size="sm">
                 Sign up
@@ -89,12 +105,15 @@ const Navbar = () => {
       </div>
 
       <div className="md:flex gap-4 hidden">
-        <Button
-          className="bg-orange text-white hover:bg-orange/80"
-          variant="secondary"
-        >
-          Sign in
-        </Button>
+      <Link href='/user/login'>
+              <Button
+                className="bg-orange text-white hover:bg-orange/80"
+                variant="secondary"
+                size="sm"
+                >
+                Sign in
+              </Button>
+            </Link>
         <Link href={'/newuser'}>
               <Button className="text-black" variant="ghost" size="sm">
                 Sign up
