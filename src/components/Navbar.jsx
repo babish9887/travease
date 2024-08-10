@@ -16,7 +16,7 @@ const Navbar = () => {
         </h2>
       </div>
       <div className="md:flex items-center gap-8 lg:gap-12 font-semibold hidden text-lg">
-        <Link href={"#"} className="hover:text-orange">
+        <Link href={"/"} className="hover:text-orange">
           Home
         </Link>
         <Link href={"#"} className="hover:text-orange">
@@ -46,7 +46,7 @@ const Navbar = () => {
         {showMenu ? (
           <div className="absolute flex-col flex mt-10 bg-white  px-3 py-4 rounded-lg text-sm font-medium gap-1 w-2/5 text-center z-50">
             <Link
-              href={"#"}
+              href={"/"}
               className=" hover:bg-gray-100 hover:text-black  text-gray-500 rounded-md px-2 py-1 w-full transition"
             >
               Home
@@ -78,9 +78,11 @@ const Navbar = () => {
               >
                 Sign in
               </Button>
+              <Link href={'/newuser'}>
               <Button className="text-black" variant="ghost" size="sm">
                 Sign up
               </Button>
+              </Link>
             </div>
           </div>
         ) : null}
@@ -93,9 +95,11 @@ const Navbar = () => {
         >
           Sign in
         </Button>
-        <Button className="text-black" variant="ghost">
-          Sign up
-        </Button>
+        <Link href={'/newuser'}>
+              <Button className="text-black" variant="ghost" size="sm">
+                Sign up
+              </Button>
+              </Link>
       </div>
     </nav>
   );
