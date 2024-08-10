@@ -11,9 +11,12 @@ const Navbar = () => {
     <nav className="w-full flex justify-between items-center py-5 px-10 sticky top-0 bg-main-background z-50">
       <div className="flex gap-2 items-center">
         <Earth className="h-7 w-7 text-orange" />
-        <h2 className="font-extrabold lg:text-3xl text-2xl text-black">
+        <Link
+          href={"/"}
+          className="font-extrabold lg:text-3xl text-2xl text-black"
+        >
           Travease
-        </h2>
+        </Link>
       </div>
       <div className="md:flex items-center gap-8 lg:gap-12 font-semibold hidden text-lg">
         <Link href={"/"} className="hover:text-orange">
@@ -25,7 +28,7 @@ const Navbar = () => {
         <Link href={"#"} className="hover:text-orange">
           Booking
         </Link>
-        <Link href={"#"} className="hover:text-orange">
+        <Link href={"/faq"} className="hover:text-orange">
           FAQ
         </Link>
       </div>
@@ -65,23 +68,25 @@ const Navbar = () => {
             </Link>
             <Link
               className=" hover:bg-gray-100 hover:text-black text-gray-500 rounded-md px-2 py-1 w-full transition"
-              href={"#"}
+              href={"/faq"}
             >
               FAQ
             </Link>
 
             <div className="flex flex-col gap-2">
-              <Button
-                className="bg-orange text-white hover:bg-orange/80"
-                variant="secondary"
-                size="sm"
-              >
-                Sign in
-              </Button>
-              <Link href={'/newuser'}>
-              <Button className="text-black" variant="ghost" size="sm">
-                Sign up
-              </Button>
+              <Link href={"/user/login"}>
+                <Button
+                  className="bg-orange text-white hover:bg-orange/80"
+                  variant="secondary"
+                  size="sm"
+                >
+                  Sign in
+                </Button>
+              </Link>
+              <Link href={"/newuser"}>
+                <Button className="text-black" variant="ghost" size="sm">
+                  Sign up
+                </Button>
               </Link>
             </div>
           </div>
@@ -89,17 +94,19 @@ const Navbar = () => {
       </div>
 
       <div className="md:flex gap-4 hidden">
+      <Link href={"/user/login"}>
         <Button
           className="bg-orange text-white text-base hover:bg-orange/80"
           variant="secondary"
         >
           Sign in
         </Button>
-        <Link href={'/newuser'}>
-              <Button className="text-black" variant="ghost" size="sm">
-                Sign up
-              </Button>
-              </Link>
+        </Link>
+        <Link href={"/newuser"}>
+          <Button className="text-black" variant="ghost" size="sm">
+            Sign up
+          </Button>
+        </Link>
       </div>
     </nav>
   );
