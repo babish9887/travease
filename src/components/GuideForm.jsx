@@ -3,7 +3,6 @@
 import React, {  useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import Nationalities from "../../Nationalities.json";
 import Districts from "../../districts.json";
 
 
@@ -11,7 +10,7 @@ import { Check, ChevronsUpDown } from "lucide-react";
 import Languages from "../../Languages.json";
 import makeAnimated from "react-select/animated";
 import {cn} from '../lib/utils'
-
+import axios from "axios";
 import {
   Command,
   CommandEmpty,
@@ -28,6 +27,7 @@ import {
 
 import Select from 'react-select'
 import { Checkbox } from "@radix-ui/react-checkbox";
+import toast from "react-hot-toast";
 
 const GuideForm = () => {
 // const [session, setSession]=useState(undefined)
@@ -46,12 +46,18 @@ const GuideForm = () => {
   const [email, setEmail]=useState("")
   const [password, setPassword]=useState("")
   const [certifiedGuide, setCertifiedGuide]=useState(false)
-  
+  const [currentlyIn, setCurrentlyIn]=useState("")
+
+  const [fee, setFee]=useState(0)
 
   const [selectedOptions, setSelectedOptions] = useState([]);
   const handleLanguageChange = (selectedOptions) => {
     setSelectedOptions(selectedOptions.map((o) => o.value));
   };
+  const [places, setPlaces]=useState([])
+  const handlePlaceChange=(selectedPlaces=>{
+      setPlaces(selectedPlaces.map((place)=>place.value))
+  })
   const options = Languages.map((language) => ({
     value: language,
     label: language,
@@ -62,8 +68,39 @@ const GuideForm = () => {
       label: language,
     }));
 
-  const handleSubmit = async () => {
-    
+    let toastId=""
+
+    const handleSubmit = async () => {
+      setIsLoading(true)
+      toast.loading("Signing Up",{id:toastId})
+      // const image=document.getElementById('pp').value
+
+      console.log(value, selectedOptions,places, certifiedGuide)
+     try {
+       await axios.post('/api/guidesignup',{
+            name,
+            email,
+            password,
+            number,
+            currently_in:value,
+            language:selectedOptions,
+            places,
+            fee
+
+
+       }).then((res)=>{
+            if(res.data.success){
+                  toast.success("Signedup successfully", {id:toastId})
+            }
+            else
+            toast.error("Failed", {id:toastId})
+       })
+     } catch (error) {
+      console.log(error)
+      toast.error(error, {id:toastId})
+     } finally{
+      setIsLoading(false)
+     }
   };
 
   return (
@@ -108,8 +145,20 @@ const GuideForm = () => {
                                     disabled={loading}
                               />
                         </div>
+
+                        <div className="w-full flex flex-col gap-2">
+          <label className="font-semibold" htmlFor="">
+            Profile Picture
+          </label>
+          <input
+          id="profile"
+            type="file"
+            className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
+            disabled={loading}
+          />
+        </div>
       <div>
-        <div className="w-full flex flex-col gap-2">
+      <div className="w-full flex flex-col gap-2">
           <label className="font-semibold" htmlFor="">
             Contact Number
           </label>
@@ -122,8 +171,6 @@ const GuideForm = () => {
           />
         </div>
 
-      
-        
 
         
       </div>
@@ -132,12 +179,58 @@ const GuideForm = () => {
             Citizenship
           </label>
           <input
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
             type="file"
             className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
             disabled={loading}
           />
+        </div>
+        <div className="w-full flex flex-col gap-2 z-10">
+          <label className="font-semibold" htmlFor="">
+            You are Currently in
+          </label>
+          <Popover open={open} onOpenChange={setOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                role="combobox"
+                aria-expanded={open}
+                className="w-full justify-between border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
+              >
+                {value
+                  ? Districts.find((district) => district === value)
+                  : "Select Nationality..."}
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-full p-0">
+              <Command>
+                <CommandInput placeholder="Search Nationality..." />
+                <CommandList>
+                  <CommandEmpty>No District found.</CommandEmpty>
+                  <CommandGroup>
+                    {Districts.map((nationality, i) => (
+                      <CommandItem
+                        key={i}
+                        value={nationality}
+                        onSelect={(currentValue) => {
+                          setValue(currentValue === value ? "" : currentValue);
+                          setOpen(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            value === nationality ? "opacity-100" : "opacity-0"
+                          )}
+                        />
+                        {nationality}
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
         </div>
 
       <div className="w-full flex gap-2">
@@ -172,7 +265,7 @@ const GuideForm = () => {
           </label>
           <Select
             closeMenuOnSelect={false}
-            onChange={handleLanguageChange}
+            onChange={handlePlaceChange}
             components={animatedComponents}
             defaultValue={"null"}
             isMulti
@@ -185,8 +278,6 @@ const GuideForm = () => {
             certificate
           </label>
           <input
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
             type="file"
             className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
             disabled={loading}
@@ -198,8 +289,8 @@ const GuideForm = () => {
             Your Expected fee(per Hour)
           </label>
           <input
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
+          value={fee}
+          onChange={(e) => setFee(e.target.value)}
             type="number"
             className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
             disabled={loading}

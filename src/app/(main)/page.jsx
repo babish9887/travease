@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+"use client"
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+=======
 "use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+>>>>>>> origin/main
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import guideList from "../../../guide.json";
@@ -14,6 +20,10 @@ import {
   CardTitle,
 } from "../../../@/components/ui/card";
 const page = () => {
+<<<<<<< HEAD
+      const [search, setSearch]=useState();
+      const [filteredList, setFilteredList]=useState([])
+=======
   const [search, setSearch] = useState();
   const [filteredList, setFilteredList] = useState([]);
   console.log(guideList);
@@ -26,6 +36,7 @@ const page = () => {
     console.log(data);
     setFilteredList(data);
   };
+>>>>>>> origin/main
 
   return (
     <main className="w-full px-10 relative min-h-screen bg-main-background">
@@ -35,7 +46,12 @@ const page = () => {
           placeholder="Search..."
           value={search}
           onChange={handleChange}
+<<<<<<< HEAD
+          className=" font-medium rounded-full w-96 text-base"
+          icon="true"
+=======
           className="font-medium rounded-xl w-96 text-base"
+>>>>>>> origin/main
         />
       </div>
 

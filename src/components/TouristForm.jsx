@@ -8,7 +8,6 @@ import Districts from "../../districts.json";
 
 
 import { Check, ChevronsUpDown } from "lucide-react";
-import Languages from "../../Languages.json";
 import makeAnimated from "react-select/animated";
 import {cn} from '../lib/utils'
 
@@ -26,8 +25,8 @@ import {
   PopoverTrigger,
 } from "./ui/popover";
 
-import Select from 'react-select'
-import { Checkbox } from "@radix-ui/react-checkbox";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const GuideForm = () => {
 // const [session, setSession]=useState(undefined)
@@ -37,33 +36,36 @@ const GuideForm = () => {
   const [loading, setIsLoading] = useState(false);
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
-  const [position, setPosition]=useState({
-      lat:0,
-      lng:0
-  })
 
   const [name, setName]=useState("")
   const [email, setEmail]=useState("")
   const [password, setPassword]=useState("")
-  const [certifiedGuide, setCertifiedGuide]=useState(false)
-  
+  const toastId=""
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
-  const handleLanguageChange = (selectedOptions) => {
-    setSelectedOptions(selectedOptions.map((o) => o.value));
-  };
-  const options = Languages.map((language) => ({
-    value: language,
-    label: language,
-  }));
 
-  const districts = Districts.map((language) => ({
-      value: language,
-      label: language,
-    }));
 
   const handleSubmit = async () => {
-    
+      setIsLoading(true)
+      toast.loading("Signing Up",{id:toastId})
+      const image=document.getElementById('pp').value
+     try {
+       await axios.post('/api/touristsignup',{
+            name,
+            email,
+            password,
+            number,
+            nationality:value
+       }).then((res)=>{
+            if(res.data.success){
+                  toast.success("Signedup successfully", {id:toastId})
+            }
+            else
+            toast.error("Failed", {id:toastId})
+       })
+     } catch (error) {
+      console.log(error)
+      toast.error(error, {id:toastId})
+     }
   };
 
   return (
@@ -117,6 +119,18 @@ const GuideForm = () => {
             value={number}
             onChange={(e) => setNumber(e.target.value)}
             type="text"
+            className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
+            disabled={loading}
+          />
+        </div>
+
+        <div className="w-full flex flex-col gap-2">
+          <label className="font-semibold" htmlFor="">
+            Profile Picture
+          </label>
+          <input
+           id="pp"
+            type="file"
             className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
             disabled={loading}
           />
