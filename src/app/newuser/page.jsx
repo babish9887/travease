@@ -12,9 +12,9 @@ function NewUserPage() {
       const [isLoading, setIsLoading]=useState(true);
       const handleClick = () => {
         if (isBuyer) {
-          router.push("/newUser/touristSignup");
+          router.push("/newuser/touristSignup");
         } else {
-          router.push("/newUser/guideSignup");
+          router.push("/newuser/guideSignup");
         }
       };
     
