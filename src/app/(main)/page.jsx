@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import guideList from '../../../guide.json'
 const page = () => {
       const [search, setSearch]=useState();
@@ -16,6 +16,7 @@ const page = () => {
             setFilteredList(data)
             
       }
+   
   return (
     <main className="w-full px-10 relative h-[calc(100vh-100px)] bg-main-background">
       <div className="w-full flex justify-center items-center mt-5 pt-6">

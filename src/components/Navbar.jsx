@@ -1,10 +1,30 @@
 "use client";
 import Link from "next/link";
+<<<<<<< HEAD
 import React, { useRef, useState } from "react";
 import { Earth, Menu } from "lucide-react";
+=======
+import React, { useRef, useState , useEffect} from "react";
+import { Input } from "./ui/input";
+import { Menu } from "lucide-react";
+>>>>>>> d706179562140efd6b2f94af482311c5a17aed39
 import { Button } from "./ui/button";
-
+import axios from "axios";
 const Navbar = () => {
+
+      const [user, setUser]=useState(null)
+
+      useEffect(()=>{
+            async function getUser(){
+                  await axios.get('/api/checkcookie')
+                  .then((res)=>{
+                        console.log(res.data)
+                        setUser(false)
+
+                  })
+            }
+            getUser()
+      },[user])
   const ref = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -74,6 +94,7 @@ const Navbar = () => {
             </Link>
 
             <div className="flex flex-col gap-2">
+<<<<<<< HEAD
               <Link href={"/user/login"}>
                 <Button
                   className="bg-orange text-white hover:bg-orange/80"
@@ -87,6 +108,21 @@ const Navbar = () => {
                 <Button className="text-black" variant="ghost" size="sm">
                   Sign up
                 </Button>
+=======
+                  <Link href='/user/login'>
+              <Button
+                className="bg-orange text-white hover:bg-orange/80"
+                variant="secondary"
+                size="sm"
+                >
+                Sign in
+              </Button>
+                  </Link>
+              <Link href={'/newuser'}>
+              <Button className="text-black" variant="ghost" size="sm">
+                Sign up
+              </Button>
+>>>>>>> d706179562140efd6b2f94af482311c5a17aed39
               </Link>
             </div>
           </div>
@@ -94,6 +130,7 @@ const Navbar = () => {
       </div>
 
       <div className="md:flex gap-4 hidden">
+<<<<<<< HEAD
       <Link href={"/user/login"}>
         <Button
           className="bg-orange text-white text-base hover:bg-orange/80"
@@ -107,6 +144,22 @@ const Navbar = () => {
             Sign up
           </Button>
         </Link>
+=======
+      <Link href='/user/login'>
+              <Button
+                className="bg-orange text-white hover:bg-orange/80"
+                variant="secondary"
+                size="sm"
+                >
+                Sign in
+              </Button>
+            </Link>
+        <Link href={'/newuser'}>
+              <Button className="text-black" variant="ghost" size="sm">
+                Sign up
+              </Button>
+              </Link>
+>>>>>>> d706179562140efd6b2f94af482311c5a17aed39
       </div>
     </nav>
   );
