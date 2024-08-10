@@ -14,7 +14,6 @@ function page() {
   const id = pathSegments[pathSegments.length - 1]; // Get the last segment
   return (
       <>
-      <div className="h-24" />
       <div className='w-full  h-[calc(100vh-6rem)] flex justify-center items-center md:px-24 md:py-16 bg-slate-50 '>
             <div className=" relative w-full h-full bg-gray-200 rounded-2xl shadow-xl flex justify-center items-center overflow-hidden">
                   <div className="w-2/5 h-full bg-gray-200">
@@ -29,7 +28,7 @@ function page() {
 
                               <p className='text-xl font-light'>Languages Known: Nepali, English, Hindi</p>
                               <p className='text-xl font-light '>Speciality:  Adventure, Nature, City</p>
-                              <p className="mb-4">Price: $123 per Day</p>
+                              <p className="mb-4 font-semibold text-base">Price: $123 per Day</p>
                               <p>Know More about guide</p>
                               <div className='flex gap-4 mb-4'>
                                     <FaFacebook className={iconStyle} />
