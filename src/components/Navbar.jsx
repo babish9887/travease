@@ -115,7 +115,7 @@ const Navbar = () => {
           </Button>
         </Link>
         <Link href={"/newuser"}>
-          <Button className="text-black" variant="ghost" size="sm">
+          <Button className="text-black text-base" variant="outline">
             Sign up
           </Button>
         </Link>

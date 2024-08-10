@@ -1,0 +1,65 @@
+[
+    {
+        "topic": "Guide Booking Process", 
+        "qna": [
+            {
+                "question": "How do I book a guide on your website?",
+                "answer": "To book a guide, visit the 'Book a Guide' section, choose between a certified or local guide, browse available profiles, and complete the booking through our secure payment gateway."
+              },
+              {
+                "question": "Can I choose my guide based on language preference?",
+                "answer": "Yes, you can filter guides by language preference when selecting a guide. This ensures you find a guide who speaks your preferred language."
+              },
+              {
+                "question": "How far in advance should I book a guide?",
+                "answer": "It's recommended to book your guide at least a week in advance, especially during peak tourist seasons, to ensure availability."
+              },
+              {
+                "question": "Can I modify or cancel my booking after confirmation?",
+                "answer": "Yes, you can modify or cancel your booking up to 48 hours before the scheduled tour. Please refer to our cancellation policy for details."
+              }
+        ]
+    }, 
+    {
+        "topic": "Certified vs Local Guides", 
+        "qna": [
+            {
+                "question": "What is a certified guide?",
+                "answer": "A certified guide is a professional who has been officially licensed by the government after completing required training and examinations. They are authorized to provide official tour services."
+              },
+              {
+                "question": "What are the benefits of hiring a certified guide?",
+                "answer": "Certified guides have extensive knowledge of the region's history, culture, and landmarks. They provide a professional and reliable service, ensuring a comprehensive and enjoyable tour experience."
+              },
+              {
+                "question": "Who should consider hiring a local guide?",
+                "answer": "Local guides are ideal for domestic tourists looking for a more informal and personalized tour experience. They are also a great option for exploring lesser-known local spots."
+              },
+              {
+                "question": "Can international tourists hire local guides?",
+                "answer": "While international tourists can hire local guides, it's important to note that local guides may not have the same level of training or certification as government-certified guides. Certified guides are recommended for official tours."
+              }
+        ]
+    },
+    {
+        "topic": "Guide Availability and Locations",
+        "qna": [
+            {
+                "question": "Are guides available in all tourist locations?",
+                "answer": "We strive to provide guides in all major tourist destinations. Certified guides are more commonly available in popular locations, while local guides may be found in more remote areas."
+              },
+              {
+                "question": "How can I check the availability of guides in my destination?",
+                "answer": "You can check the availability of guides by selecting your destination on the 'Book a Guide' page. Available guides will be displayed based on your selected location and dates."
+              },
+              {
+                "question": "What should I do if no guides are available in my chosen location?",
+                "answer": "If no guides are available in your selected location, you can contact our support team for assistance. We may be able to arrange a guide from a nearby area."
+              },
+              {
+                "question": "Do local guides operate year-round?",
+                "answer": "Local guides generally operate year-round, but their availability may vary depending on the season and local demand. It's best to check availability in advance."
+              }
+        ]
+    }
+]
