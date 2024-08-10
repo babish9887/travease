@@ -173,6 +173,10 @@ const GuideForm = () => {
           </Popover>
         </div>
 
+        <Button type="button" variant="secondary" disabled={loading}>
+          Continue with Google
+        </Button>
+
         <Button type="button" onClick={handleSubmit} disabled={loading}>
           Submit
         </Button>
