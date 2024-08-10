@@ -1,7 +1,7 @@
 import React from "react";
 
 const MainLayout = ({ children }) => {
-  return <main className="px-6">{children}</main>;
+  return <main >{children}</main>;
 };
 
 export default MainLayout;
