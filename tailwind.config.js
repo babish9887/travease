@@ -1,4 +1,5 @@
-import daisyui from "daisyui"
+import daisyui from "daisyui";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   daisyui: {
@@ -57,11 +58,11 @@ module.exports = {
         },
         "main-background": "#F2EDE4",
         "secondary-background": "#DFD9CE",
-        "orange": "#F26C05",
+        orange: "#F26C05",
         "second-orange": "#F4954B",
         "dark-black": "#142316",
-        "biege": "#E2D7BA",
-        "main-green": "#1A1C12",
+        biege: "#E2D7BA",
+        "main-green": "#142316",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,5 +85,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), daisyui],
+  plugins: [require("tailwindcss-animate", "tailwind-scrollbar"), daisyui],
 };

@@ -5,18 +5,19 @@ import React from "react";
 
 const page = () => {
   return (
-    <main className="w-full relative h-[calc(100vh-100px)] bg-main-background">
+    <main className="w-full px-10 relative h-[calc(100vh-100px)] bg-main-background">
       <div className="w-full flex justify-center items-center mt-5 pt-6">
         <Input
           type="text"
           placeholder="Search..."
-          className=" font-medium rounded-full w-96 text-base"
+          className=" font-medium rounded-xl w-96 text-base"
+          icon
         />
       </div>
 
       <div className="w-full rounded-2xl h-[28rem] relative mt-12 z-20 bg-[url('/main.jpg')] bg-cover bg-center">
         <div
-          className="bg-main-green/80 rounded-xl h-full md:w-1/2  xl:w-1/3 w-full absolute py-4 px-10 sm:px-12 xl:px-12
+          className="bg-[#163314]/90 rounded-3xl h-full md:w-1/2  xl:w-1/3 w-full absolute py-4 px-10 sm:px-12 xl:px-12
         "
         >
           <div className="md:w-full xl:w-3/4 w-2/3 sm:w-3/4 mt-6">
@@ -30,7 +31,7 @@ const page = () => {
               Discover possibilties of travelling!
             </h4>
             <Button
-              className="mt-5 rounded-full bg-orange px-8 text-lg"
+              className="mt-5 rounded-full bg-orange hover:bg-orange/90 px-8 text-lg"
               size="lg"
             >
               <Link href={"#"}>Explore</Link>

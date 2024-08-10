@@ -2,6 +2,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,11 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
       <body
-        className={`px-10 bg-main-background`}
+        className={`bg-main-background scroll-smooth`}
         style={{ fontFamily: "'Gelion', sans-serif" }}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

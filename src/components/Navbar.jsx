@@ -1,21 +1,21 @@
 "use client";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
-import { Input } from "./ui/input";
-import { Menu } from "lucide-react";
+import { Earth, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
   const ref = useRef(null);
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <nav className="w-full flex justify-between items-center py-5 rounded-3xl px-4 sticky top-0 bg-main-background z-50">
-      <div>
-        <h2 className="font-extrabold lg:text-3xl text-2xl text-orange uppercase">
+    <nav className="w-full flex justify-between items-center py-5 px-10 sticky top-0 bg-main-background z-50">
+      <div className="flex gap-2 items-center">
+        <Earth className="h-7 w-7 text-orange" />
+        <h2 className="font-extrabold lg:text-3xl text-2xl text-black">
           Travease
         </h2>
       </div>
-      <div className="md:flex items-center gap-8 lg:gap-12 font-semibold hidden text-lg">
+      <div className="md:flex items-center gap-8 lg:gap-12 font-medium hidden text-lg">
         <Link href={"#"} className="hover:text-orange">
           Home
         </Link>
@@ -88,12 +88,12 @@ const Navbar = () => {
 
       <div className="md:flex gap-4 hidden">
         <Button
-          className="bg-orange text-white hover:bg-orange/80"
+          className="bg-orange text-white text-base hover:bg-orange/80"
           variant="secondary"
         >
           Sign in
         </Button>
-        <Button className="text-black" variant="ghost">
+        <Button className="text-black text-base" variant="outline">
           Sign up
         </Button>
       </div>
