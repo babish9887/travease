@@ -1,29 +1,11 @@
-<<<<<<< HEAD
-"use client"
+"use client";
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
-=======
-"use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
->>>>>>> origin/main
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import guideList from "../../../guide.json";
-import GuideCard from "@/components/guidecard";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../../../@/components/ui/card";
+
 const page = () => {
-<<<<<<< HEAD
-      const [search, setSearch]=useState();
-      const [filteredList, setFilteredList]=useState([])
-=======
   const [search, setSearch] = useState();
   const [filteredList, setFilteredList] = useState([]);
   console.log(guideList);
@@ -36,7 +18,6 @@ const page = () => {
     console.log(data);
     setFilteredList(data);
   };
->>>>>>> origin/main
 
   return (
     <main className="w-full px-10 relative min-h-screen bg-main-background">
@@ -46,12 +27,7 @@ const page = () => {
           placeholder="Search..."
           value={search}
           onChange={handleChange}
-<<<<<<< HEAD
-          className=" font-medium rounded-full w-96 text-base"
-          icon="true"
-=======
           className="font-medium rounded-xl w-96 text-base"
->>>>>>> origin/main
         />
       </div>
 
@@ -85,9 +61,12 @@ const page = () => {
         <div className="w-auto grid mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {guideList.map((item) => {
             return (
-              <div className="w-80 sm:w-60 w- xl:w-72 aspect-square bg-secondary-background rounded-3xl flex flex-col justify-center items-center gap-y-4 hover:scale-105 transition-all cursor-pointer">
-                <div className="w-28 h-28 rounded-full bg-gray-100 self-center"></div>
-                <div className="flex justify-center items-center flex-col">
+              <div
+                className={`w-80 sm:w-60 h-80 xl:w-72 aspect-square bg-secondary-background rounded-3xl flex flex-col justify-between items-center gap-y-4 hover:scale-105 transition-all cursor-pointer`}
+                key={item.id}
+              >
+                <img src={item.image} alt="" className="object-cover h-3/4 w-full rounded-t-3xl" />
+                <div className="flex justify-center items-center flex-col rounded-t-2xl w-full">
                   <h1 className="text-xl font-medium">{item.name}</h1>
                   <p className="text-lg font-thin">{item.currently_in}</p>
                 </div>

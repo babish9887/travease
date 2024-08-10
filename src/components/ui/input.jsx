@@ -17,11 +17,7 @@ const Input = React.forwardRef(({ className, type, icon,...props }, ref) => {
         ref={ref}
         {...props}
       />
-<<<<<<< HEAD
-      {icon=="true" ? (
-=======
       {!props.icon ? (
->>>>>>> origin/main
         <Search className="absolute right-3 cursor-pointer w-5 h-5 text-orange" />
       ) : (
         <Button className="absolute right-0 bg-orange hover:bg-orange/90">Subscribe</Button>
