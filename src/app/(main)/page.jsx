@@ -1,13 +1,12 @@
 "use client"
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import guideList from '../../../guide.json'
 const page = () => {
       const [search, setSearch]=useState();
       const [filteredList, setFilteredList]=useState([])
-      console.log(guideList)
 
       const handleChange=(e)=>{
             if(e.target.value.length<4) return;
@@ -26,6 +25,7 @@ const page = () => {
           value={search}
           onChange={handleChange}
           className=" font-medium rounded-full w-96 text-base"
+          icon="true"
         />
       </div>
 

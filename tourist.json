@@ -1,153 +1,152 @@
 [
-        {
-          "id": 1,
-          "name": "John Smith",
-          "image": "https://i.pravatar.cc/333?img=101",
-          "password": "johnspass",
-          "language": "English",
-          "contact": "+1-123-456-7890",
-          "nationality": "American",
-          "email": "john.smith@example.com"
-        },
-        {
-          "id": 2,
-          "name": "Maria Garcia",
-          "image": "https://i.pravatar.cc/333?img=102",
-          "password": "mariapass",
-          "language": "Spanish",
-          "contact": "+34-678-901-234",
-          "nationality": "Spanish",
-          "email": "maria.garcia@example.com"
-        },
-        {
-          "id": 3,
-          "name": "Wei Zhang",
-          "image": "https://i.pravatar.cc/333?img=103",
-          "password": "weipass",
-          "language": "Chinese",
-          "contact": "+86-139-1234-5678",
-          "nationality": "Chinese",
-          "email": "wei.zhang@example.com"
-        },
-        {
-          "id": 4,
-          "name": "Anna Müller",
-          "image": "https://i.pravatar.cc/333?img=104",
-          "password": "annapass",
-          "language": "German",
-          "contact": "+49-170-1234567",
-          "nationality": "German",
-          "email": "anna.mueller@example.com"
-        },
-        {
-          "id": 5,
-          "name": "Pierre Dubois",
-          "image": "https://i.pravatar.cc/333?img=105",
-          "password": "pierrepass",
-          "language": "French",
-          "contact": "+33-1-23456789",
-          "nationality": "French",
-          "email": "pierre.dubois@example.com"
-        },
-        {
-          "id": 6,
-          "name": "Akira Tanaka",
-          "image": "https://i.pravatar.cc/333?img=106",
-          "password": "akirapass",
-          "language": "Japanese",
-          "contact": "+81-90-1234-5678",
-          "nationality": "Japanese",
-          "email": "akira.tanaka@example.com"
-        },
-        {
-          "id": 7,
-          "name": "Elena Rossi",
-          "image": "https://i.pravatar.cc/333?img=107",
-          "password": "elenapass",
-          "language": "Italian",
-          "contact": "+39-335-1234567",
-          "nationality": "Italian",
-          "email": "elena.rossi@example.com"
-        },
-        {
-          "id": 8,
-          "name": "Raj Sharma",
-          "image": "https://i.pravatar.cc/333?img=108",
-          "password": "rajpass",
-          "language": "Nepali",
-          "contact": "+977-9810000001",
-          "nationality": "Nepali",
-          "email": "raj.sharma@example.com"
-        },
-        {
-          "id": 9,
-          "name": "Priti Rai",
-          "image": "https://i.pravatar.cc/333?img=109",
-          "password": "pritipass",
-          "language": "Nepali",
-          "contact": "+977-9810000002",
-          "nationality": "Nepali",
-          "email": "priti.rai@example.com"
-        },
-        {
-          "id": 10,
-          "name": "Sita Gurung",
-          "image": "https://i.pravatar.cc/333?img=110",
-          "password": "sitapass",
-          "language": "Nepali",
-          "contact": "+977-9810000003",
-          "nationality": "Nepali",
-          "email": "sita.gurung@example.com"
-        },
-        {
-          "id": 11,
-          "name": "Manoj Ghimire",
-          "image": "https://i.pravatar.cc/333?img=111",
-          "password": "manojpass",
-          "language": "Nepali",
-          "contact": "+977-9810000004",
-          "nationality": "Nepali",
-          "email": "manoj.ghimire@example.com"
-        },
-        {
-          "id": 12,
-          "name": "Nisha Thapa",
-          "image": "https://i.pravatar.cc/333?img=112",
-          "password": "nishapass",
-          "language": "Nepali",
-          "contact": "+977-9810000005",
-          "nationality": "Nepali",
-          "email": "nisha.thapa@example.com"
-        },
-        {
-          "id": 13,
-          "name": "David Brown",
-          "image": "https://i.pravatar.cc/333?img=113",
-          "password": "davidpass",
-          "language": "English",
-          "contact": "+1-987-654-3210",
-          "nationality": "American",
-          "email": "david.brown@example.com"
-        },
-        {
-          "id": 14,
-          "name": "Sophie Lee",
-          "image": "https://i.pravatar.cc/333?img=114",
-          "password": "sophiepass",
-          "language": "Korean",
-          "contact": "+82-10-1234-5678",
-          "nationality": "Korean",
-          "email": "sophie.lee@example.com"
-        },
-        {
-          "id": 15,
-          "name": "Carlos Silva",
-          "image": "https://i.pravatar.cc/333?img=115",
-          "password": "carlospass",
-          "language": "Portuguese",
-          "contact": "+351-912-345-678",
-          "nationality": "Portuguese",
-          "email": "carlos.silva@example.com"
-        }
-      ]
-    
+  {
+    "id": 1,
+    "name": "John Smith",
+    "image": "https://i.pravatar.cc/333?img=101",
+    "password": "johnspass",
+    "language": "English",
+    "contact": "+1-123-456-7890",
+    "nationality": "American",
+    "email": "john.smith@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Maria Garcia",
+    "image": "https://i.pravatar.cc/333?img=102",
+    "password": "mariapass",
+    "language": "Spanish",
+    "contact": "+34-678-901-234",
+    "nationality": "Spanish",
+    "email": "maria.garcia@example.com"
+  },
+  {
+    "id": 3,
+    "name": "Wei Zhang",
+    "image": "https://i.pravatar.cc/333?img=103",
+    "password": "weipass",
+    "language": "Chinese",
+    "contact": "+86-139-1234-5678",
+    "nationality": "Chinese",
+    "email": "wei.zhang@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Anna Müller",
+    "image": "https://i.pravatar.cc/333?img=104",
+    "password": "annapass",
+    "language": "German",
+    "contact": "+49-170-1234567",
+    "nationality": "German",
+    "email": "anna.mueller@example.com"
+  },
+  {
+    "id": 5,
+    "name": "Pierre Dubois",
+    "image": "https://i.pravatar.cc/333?img=105",
+    "password": "pierrepass",
+    "language": "French",
+    "contact": "+33-1-23456789",
+    "nationality": "French",
+    "email": "pierre.dubois@example.com"
+  },
+  {
+    "id": 6,
+    "name": "Akira Tanaka",
+    "image": "https://i.pravatar.cc/333?img=106",
+    "password": "akirapass",
+    "language": "Japanese",
+    "contact": "+81-90-1234-5678",
+    "nationality": "Japanese",
+    "email": "akira.tanaka@example.com"
+  },
+  {
+    "id": 7,
+    "name": "Elena Rossi",
+    "image": "https://i.pravatar.cc/333?img=107",
+    "password": "elenapass",
+    "language": "Italian",
+    "contact": "+39-335-1234567",
+    "nationality": "Italian",
+    "email": "elena.rossi@example.com"
+  },
+  {
+    "id": 8,
+    "name": "Raj Sharma",
+    "image": "https://i.pravatar.cc/333?img=108",
+    "password": "rajpass",
+    "language": "Nepali",
+    "contact": "+977-9810000001",
+    "nationality": "Nepali",
+    "email": "raj.sharma@example.com"
+  },
+  {
+    "id": 9,
+    "name": "Priti Rai",
+    "image": "https://i.pravatar.cc/333?img=109",
+    "password": "pritipass",
+    "language": "Nepali",
+    "contact": "+977-9810000002",
+    "nationality": "Nepali",
+    "email": "priti.rai@example.com"
+  },
+  {
+    "id": 10,
+    "name": "Sita Gurung",
+    "image": "https://i.pravatar.cc/333?img=110",
+    "password": "sitapass",
+    "language": "Nepali",
+    "contact": "+977-9810000003",
+    "nationality": "Nepali",
+    "email": "sita.gurung@example.com"
+  },
+  {
+    "id": 11,
+    "name": "Manoj Ghimire",
+    "image": "https://i.pravatar.cc/333?img=111",
+    "password": "manojpass",
+    "language": "Nepali",
+    "contact": "+977-9810000004",
+    "nationality": "Nepali",
+    "email": "manoj.ghimire@example.com"
+  },
+  {
+    "id": 12,
+    "name": "Nisha Thapa",
+    "image": "https://i.pravatar.cc/333?img=112",
+    "password": "nishapass",
+    "language": "Nepali",
+    "contact": "+977-9810000005",
+    "nationality": "Nepali",
+    "email": "nisha.thapa@example.com"
+  },
+  {
+    "id": 13,
+    "name": "David Brown",
+    "image": "https://i.pravatar.cc/333?img=113",
+    "password": "davidpass",
+    "language": "English",
+    "contact": "+1-987-654-3210",
+    "nationality": "American",
+    "email": "david.brown@example.com"
+  },
+  {
+    "id": 14,
+    "name": "Sophie Lee",
+    "image": "https://i.pravatar.cc/333?img=114",
+    "password": "sophiepass",
+    "language": "Korean",
+    "contact": "+82-10-1234-5678",
+    "nationality": "Korean",
+    "email": "sophie.lee@example.com"
+  },
+  {
+    "id": 15,
+    "name": "Carlos Silva",
+    "image": "https://i.pravatar.cc/333?img=115",
+    "password": "carlospass",
+    "language": "Portuguese",
+    "contact": "+351-912-345-678",
+    "nationality": "Portuguese",
+    "email": "carlos.silva@example.com"
+  }
+]
