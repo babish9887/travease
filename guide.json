@@ -1,347 +1,407 @@
 [
-    {
-      "id": 1,
-      "name": "Ram Thapa",
-      "email": "ramthapa@example.com",
-      "password": "password123",
-      "language": "Nepali",
-      "speciality": "culture",
-      "currently_in": "Kathmandu",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=8",
-      "contact_no": "+977-9810000001",
-      "social_media": {
-        "facebook": "https://facebook.com/ramthapa",
-        "instagram": "https://instagram.com/ramthapa",
-        "linkedin": "https://linkedin.com/in/ramthapa"
-      },
-      "rating": 4.0,
-      "fee": 232,
-      "citizenship_card": "https://example.com/ramthapa-citizenship",
-      "guide_certificate": "https://example.com/ramthapa-certificate",
-      "places": ["Kathmandu Durbar Square", "Swayambhunath Stupa", "Patan Durbar Square"],
-      "description": "Ram Thapa is a seasoned cultural guide in Kathmandu, passionate about sharing the rich heritage of Nepal. He specializes in historical sites and local traditions, offering a deep dive into the vibrant culture of the Kathmandu Valley."
+  {
+    "id": 1,
+    "name": "Ram Thapa",
+    "email": "ramthapa@example.com",
+    "password": "password123",
+    "language": "Nepali",
+    "speciality": "culture",
+    "currently_in": "Kathmandu",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=8",
+    "contact_no": "+977-9810000001",
+    "social_media": {
+      "facebook": "https://facebook.com/ramthapa",
+      "instagram": "https://instagram.com/ramthapa",
+      "linkedin": "https://linkedin.com/in/ramthapa"
     },
-    {
-      "id": 2,
-      "name": "Sita Sharma",
-      "email": "sitasharma@example.com",
-      "password": "securepass",
-      "language": "Nepali",
-      "speciality": "adventure",
-      "currently_in": "Pokhara",
-      "available": false,
-      "image": "https://i.pravatar.cc/333?img=5",
-      "contact_no": "+977-9810000002",
-      "social_media": {
-        "facebook": "https://facebook.com/sitasharma",
-        "instagram": "https://instagram.com/sitasharma",
-        "linkedin": "https://linkedin.com/in/sitasharma"
-      },
-      "fee": 275,
-      "rating": 4.5,
-      "citizenship_card": "https://example.com/sitasharma-citizenship",
-      "guide_certificate": "https://example.com/sitasharma-certificate",
-      "places": ["Poon Hill", "Sarangkot", "Begnas Lake"],
-      "description": "Sita Sharma is an adventure enthusiast based in Pokhara, specializing in trekking and hiking. She brings a wealth of knowledge about the scenic trails and hidden gems of the region, making her an ideal guide for thrill-seekers."
+    "rating": 4,
+    "fee": 232,
+    "citizenship_card": "https://example.com/ramthapa-citizenship",
+    "guide_certificate": "https://example.com/ramthapa-certificate",
+    "places": [
+      "Kathmandu Durbar Square",
+      "Swayambhunath Stupa",
+      "Patan Durbar Square"
+    ],
+    "description": "Ram Thapa is a seasoned cultural guide in Kathmandu, passionate about sharing the rich heritage of Nepal. He specializes in historical sites and local traditions, offering a deep dive into the vibrant culture of the Kathmandu Valley."
+  },
+  {
+    "id": 2,
+    "name": "Sita Sharma",
+    "email": "sitasharma@example.com",
+    "password": "securepass",
+    "language": "Nepali",
+    "speciality": "adventure",
+    "currently_in": "Pokhara",
+    "available": false,
+    "image": "https://i.pravatar.cc/333?img=5",
+    "contact_no": "+977-9810000002",
+    "social_media": {
+      "facebook": "https://facebook.com/sitasharma",
+      "instagram": "https://instagram.com/sitasharma",
+      "linkedin": "https://linkedin.com/in/sitasharma"
     },
-    {
-      "id": 3,
-      "name": "Hari Dhakal",
-      "email": "haridhakal@example.com",
-      "password": "haripass",
-      "language": "Nepali",
-      "speciality": "religious",
-      "currently_in": "Lalitpur",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=11",
-      "contact_no": "+977-9810000003",
-      "social_media": {
-        "facebook": "https://facebook.com/haridhakal",
-        "instagram": "https://instagram.com/haridhakal",
-        "linkedin": "https://linkedin.com/in/haridhakal"
-      },
-      "fee": 150,
-      "rating": 5.0,
-      "citizenship_card": "https://example.com/haridhakal-citizenship",
-      "guide_certificate": "https://example.com/haridhakal-certificate",
-      "places": ["Patan Durbar Square", "Hiranya Varna Mahavihar", "Mahabouddha Temple"],
-      "description": "Hari Dhakal is a knowledgeable religious guide based in Lalitpur, with a deep understanding of Nepal’s spiritual sites. He offers insightful tours of temples and monasteries, making him a perfect guide for those interested in Nepalese spirituality."
+    "fee": 275,
+    "rating": 4.5,
+    "citizenship_card": "https://example.com/sitasharma-citizenship",
+    "guide_certificate": "https://example.com/sitasharma-certificate",
+    "places": [
+      "Poon Hill",
+      "Sarangkot",
+      "Begnas Lake"
+    ],
+    "description": "Sita Sharma is an adventure enthusiast based in Pokhara, specializing in trekking and hiking. She brings a wealth of knowledge about the scenic trails and hidden gems of the region, making her an ideal guide for thrill-seekers."
+  },
+  {
+    "id": 3,
+    "name": "Hari Dhakal",
+    "email": "haridhakal@example.com",
+    "password": "haripass",
+    "language": "Nepali",
+    "speciality": "religious",
+    "currently_in": "Lalitpur",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=11",
+    "contact_no": "+977-9810000003",
+    "social_media": {
+      "facebook": "https://facebook.com/haridhakal",
+      "instagram": "https://instagram.com/haridhakal",
+      "linkedin": "https://linkedin.com/in/haridhakal"
     },
-    {
-      "id": 4,
-      "name": "Gita Adhikari",
-      "email": "gitaadhikari@example.com",
-      "password": "gitapass",
-      "language": "Nepali",
-      "speciality": "nature",
-      "currently_in": "Mustang",
-      "available": false,
-      "image": "https://i.pravatar.cc/333?img=9",
-      "contact_no": "+977-9810000004",
-      "social_media": {
-        "facebook": "https://facebook.com/gitaadhikari",
-        "instagram": "https://instagram.com/gitaadhikari",
-        "linkedin": "https://linkedin.com/in/gitaadhikari"
-      },
-      "fee": 180,
-      "rating":4.0,
-      "citizenship_card": "https://example.com/gitaadhikari-citizenship",
-      "guide_certificate": "https://example.com/gitaadhikari-certificate",
-      "places": ["Muktinath", "Jomsom", "Upper Mustang"],
-      "description": "Gita Adhikari is a nature lover and guide in the Mustang region, known for her deep connection to the local environment. She specializes in eco-tours, offering breathtaking experiences in the pristine landscapes of Mustang."
+    "fee": 150,
+    "rating": 5,
+    "citizenship_card": "https://example.com/haridhakal-citizenship",
+    "guide_certificate": "https://example.com/haridhakal-certificate",
+    "places": [
+      "Patan Durbar Square",
+      "Hiranya Varna Mahavihar",
+      "Mahabouddha Temple"
+    ],
+    "description": "Hari Dhakal is a knowledgeable religious guide based in Lalitpur, with a deep understanding of Nepal’s spiritual sites. He offers insightful tours of temples and monasteries, making him a perfect guide for those interested in Nepalese spirituality."
+  },
+  {
+    "id": 4,
+    "name": "Gita Adhikari",
+    "email": "gitaadhikari@example.com",
+    "password": "gitapass",
+    "language": "Nepali",
+    "speciality": "nature",
+    "currently_in": "Mustang",
+    "available": false,
+    "image": "https://i.pravatar.cc/333?img=9",
+    "contact_no": "+977-9810000004",
+    "social_media": {
+      "facebook": "https://facebook.com/gitaadhikari",
+      "instagram": "https://instagram.com/gitaadhikari",
+      "linkedin": "https://linkedin.com/in/gitaadhikari"
     },
-    {
-      "id": 5,
-      "name": "Krishna KC",
-      "email": "krishnakc@example.com",
-      "password": "krishnapass",
-      "language": "Nepali",
-      "speciality": "arts",
-      "currently_in": "Chitwan",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=12",
-      "contact_no": "+977-9810000005",
-      "social_media": {
-        "facebook": "https://facebook.com/krishnakc",
-        "instagram": "https://instagram.com/krishnakc",
-        "linkedin": "https://linkedin.com/in/krishnakc"
-      },
-      "fee": 300,
-      "rating":4.6,
-      "citizenship_card": "https://example.com/krishnakc-citizenship",
-      "guide_certificate": "https://example.com/krishnakc-certificate",
-      "places": ["Chitwan National Park", "Bardia National Park", "Sauraha"],
-      "description": "Krishna KC is an arts-focused guide based in Chitwan, with a passion for the intersection of culture and nature. He provides enriching tours that blend art, history, and the natural beauty of the Chitwan region."
+    "fee": 180,
+    "rating": 4,
+    "citizenship_card": "https://example.com/gitaadhikari-citizenship",
+    "guide_certificate": "https://example.com/gitaadhikari-certificate",
+    "places": [
+      "Muktinath",
+      "Jomsom",
+      "Upper Mustang"
+    ],
+    "description": "Gita Adhikari is a nature lover and guide in the Mustang region, known for her deep connection to the local environment. She specializes in eco-tours, offering breathtaking experiences in the pristine landscapes of Mustang."
+  },
+  {
+    "id": 5,
+    "name": "Krishna KC",
+    "email": "krishnakc@example.com",
+    "password": "krishnapass",
+    "language": "Nepali",
+    "speciality": "arts",
+    "currently_in": "Chitwan",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=12",
+    "contact_no": "+977-9810000005",
+    "social_media": {
+      "facebook": "https://facebook.com/krishnakc",
+      "instagram": "https://instagram.com/krishnakc",
+      "linkedin": "https://linkedin.com/in/krishnakc"
     },
-    {
-      "id": 6,
-      "name": "Shila Acharya",
-      "email": "shilaacharya@example.com",
-      "password": "shilapass",
-      "language": "Nepali",
-      "speciality": "city",
-      "currently_in": "Janakpur",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=16",
-      "contact_no": "+977-9810000006",
-      "social_media": {
-        "facebook": "https://facebook.com/shilaacharya",
-        "instagram": "https://instagram.com/shilaacharya",
-        "linkedin": "https://linkedin.com/in/shilaacharya"
-      },
-      "fee": 100,
-      "rating":4.1,
-      "citizenship_card": "https://example.com/shilaacharya-citizenship",
-      "guide_certificate": "https://example.com/shilaacharya-certificate",
-      "places": ["Janaki Temple", "Rama Sethu", "Dhanushadham"],
-      "description": "Shila Acharya is a city guide based in Janakpur, well-versed in the history and culture of the Mithila region. She offers engaging tours of Janakpur's iconic landmarks, making her an ideal guide for exploring the city's rich heritage."
+    "fee": 300,
+    "rating": 4.6,
+    "citizenship_card": "https://example.com/krishnakc-citizenship",
+    "guide_certificate": "https://example.com/krishnakc-certificate",
+    "places": [
+      "Chitwan National Park",
+      "Bardia National Park",
+      "Sauraha"
+    ],
+    "description": "Krishna KC is an arts-focused guide based in Chitwan, with a passion for the intersection of culture and nature. He provides enriching tours that blend art, history, and the natural beauty of the Chitwan region."
+  },
+  {
+    "id": 6,
+    "name": "Shila Acharya",
+    "email": "shilaacharya@example.com",
+    "password": "shilapass",
+    "language": "Nepali",
+    "speciality": "city",
+    "currently_in": "Janakpur",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=16",
+    "contact_no": "+977-9810000006",
+    "social_media": {
+      "facebook": "https://facebook.com/shilaacharya",
+      "instagram": "https://instagram.com/shilaacharya",
+      "linkedin": "https://linkedin.com/in/shilaacharya"
     },
-    {
-      "id": 7,
-      "name": "Bikram Shrestha",
-      "email": "bikramshrestha@example.com",
-      "password": "bikrampass",
-      "language": "Nepali",
-      "speciality": "culture",
-      "currently_in": "Kapilvastu",
-      "available": false,
-      "image": "https://i.pravatar.cc/333?img=14",
-      "contact_no": "+977-9810000007",
-      "social_media": {
-        "facebook": "https://facebook.com/bikramshrestha",
-        "instagram": "https://instagram.com/bikramshrestha",
-        "linkedin": "https://linkedin.com/in/bikramshrestha"
-      },
-      "fee": 80,
-      "rating":4.0,
-      "citizenship_card": "https://example.com/bikramshrestha-citizenship",
-      "guide_certificate": "https://example.com/bikramshrestha-certificate",
-      "places": ["Lumbini", "Kapilvastu Ruins", "Tilaurakot"],
-      "description": "Bikram Shrestha is a cultural guide with deep roots in Kapilvastu, focusing on the historical and spiritual significance of the area. His tours provide an immersive experience in the birthplace of Buddha, Lumbini."
+    "fee": 100,
+    "rating": 4.1,
+    "citizenship_card": "https://example.com/shilaacharya-citizenship",
+    "guide_certificate": "https://example.com/shilaacharya-certificate",
+    "places": [
+      "Janaki Temple",
+      "Rama Sethu",
+      "Dhanushadham"
+    ],
+    "description": "Shila Acharya is a city guide based in Janakpur, well-versed in the history and culture of the Mithila region. She offers engaging tours of Janakpur's iconic landmarks, making her an ideal guide for exploring the city's rich heritage."
+  },
+  {
+    "id": 7,
+    "name": "Bikram Shrestha",
+    "email": "bikramshrestha@example.com",
+    "password": "bikrampass",
+    "language": "Nepali",
+    "speciality": "culture",
+    "currently_in": "Kapilvastu",
+    "available": false,
+    "image": "https://i.pravatar.cc/333?img=14",
+    "contact_no": "+977-9810000007",
+    "social_media": {
+      "facebook": "https://facebook.com/bikramshrestha",
+      "instagram": "https://instagram.com/bikramshrestha",
+      "linkedin": "https://linkedin.com/in/bikramshrestha"
     },
-    {
-      "id": 8,
-      "name": "Manju Bista",
-      "email": "manjubista@example.com",
-      "password": "manjupass",
-      "language": "Nepali",
-      "speciality": "adventure",
-      "currently_in": "Solukhumbu",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=6",
-      "contact_no": "+977-9810000008",
-      "social_media": {
-        "facebook": "https://facebook.com/manjubista",
-        "instagram": "https://instagram.com/manjubista",
-        "linkedin": "https://linkedin.com/in/manjubista"
-      },
-      "fee": 350,
-      "rating":4.2,
-      "citizenship_card": "https://example.com/manjubista-citizenship",
-      "guide_certificate": "https://example.com/manjubista-certificate",
-      "places": ["Everest Base Camp", "Namche Bazaar", "Gokyo Lakes"],
-      "description": "Manju Bista is an experienced adventure guide based in Solukhumbu, specializing in high-altitude trekking. She leads expeditions to Everest Base Camp and beyond, offering expert guidance in the rugged terrain of the Himalayas."
+    "fee": 80,
+    "rating": 4,
+    "citizenship_card": "https://example.com/bikramshrestha-citizenship",
+    "guide_certificate": "https://example.com/bikramshrestha-certificate",
+    "places": [
+      "Lumbini",
+      "Kapilvastu Ruins",
+      "Tilaurakot"
+    ],
+    "description": "Bikram Shrestha is a cultural guide with deep roots in Kapilvastu, focusing on the historical and spiritual significance of the area. His tours provide an immersive experience in the birthplace of Buddha, Lumbini."
+  },
+  {
+    "id": 8,
+    "name": "Manju Bista",
+    "email": "manjubista@example.com",
+    "password": "manjupass",
+    "language": "Nepali",
+    "speciality": "adventure",
+    "currently_in": "Solukhumbu",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=6",
+    "contact_no": "+977-9810000008",
+    "social_media": {
+      "facebook": "https://facebook.com/manjubista",
+      "instagram": "https://instagram.com/manjubista",
+      "linkedin": "https://linkedin.com/in/manjubista"
     },
-    {
-      "id": 9,
-      "name": "Ramesh Basnet",
-      "email": "rameshbasnet@example.com",
-      "password": "rameshpass",
-      "language": "Nepali",
-      "speciality": "religious",
-      "currently_in": "Gorkha",
-      "available": false,
-      "image": "https://i.pravatar.cc/333?img=51",
-      "contact_no": "+977-9810000009",
-      "social_media": {
-        "facebook": "https://facebook.com/rameshbasnet",
-        "instagram": "https://instagram.com/rameshbasnet",
-        "linkedin": "https://linkedin.com/in/rameshbasnet"
-      },
-      "fee": 150,
-      "rating":4.9,
-      "citizenship_card": "https://example.com/rameshbasnet-citizenship",
-      "guide_certificate": "https://example.com/rameshbasnet-certificate",
-      "places": ["Gorkha Durbar Square", "Manakamana Temple", "Siddhikali Temple"],
-      "description": "Ramesh Basnet is a knowledgeable religious guide from Gorkha, specializing in spiritual tours. He offers deep insights into the cultural and historical significance of Gorkha Durbar Square, Manakamana Temple, and Siddhikali Temple."
+    "fee": 350,
+    "rating": 4.2,
+    "citizenship_card": "https://example.com/manjubista-citizenship",
+    "guide_certificate": "https://example.com/manjubista-certificate",
+    "places": [
+      "Everest Base Camp",
+      "Namche Bazaar",
+      "Gokyo Lakes"
+    ],
+    "description": "Manju Bista is an experienced adventure guide based in Solukhumbu, specializing in high-altitude trekking. She leads expeditions to Everest Base Camp and beyond, offering expert guidance in the rugged terrain of the Himalayas."
+  },
+  {
+    "id": 9,
+    "name": "Ramesh Basnet",
+    "email": "rameshbasnet@example.com",
+    "password": "rameshpass",
+    "language": "Nepali",
+    "speciality": "religious",
+    "currently_in": "Gorkha",
+    "available": false,
+    "image": "https://i.pravatar.cc/333?img=51",
+    "contact_no": "+977-9810000009",
+    "social_media": {
+      "facebook": "https://facebook.com/rameshbasnet",
+      "instagram": "https://instagram.com/rameshbasnet",
+      "linkedin": "https://linkedin.com/in/rameshbasnet"
     },
-    {
-      "id": 10,
-      "name": "Deepak Shrestha",
-      "email": "deepakshrestha@example.com",
-      "password": "deepakpass",
-      "language": "Nepali",
-      "speciality": "cultural",
-      "currently_in": "Bhaktapur",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=52",
-      "contact_no": "+977-9810000010",
-      "social_media": {
-        "facebook": "https://facebook.com/deepakshrestha",
-        "instagram": "https://instagram.com/deepakshrestha",
-        "linkedin": "https://linkedin.com/in/deepakshrestha"
-      },
-      "fee": 200,
-      "rating":4.5,
-      "citizenship_card": "https://example.com/deepakshrestha-citizenship",
-      "guide_certificate": "https://example.com/deepakshrestha-certificate",
-      "places": ["Bhaktapur Durbar Square", "Changu Narayan Temple", "Nyatapola Temple"],
-      "description": "Deepak Shrestha is a cultural guide in Bhaktapur, offering in-depth tours of the city's rich heritage sites. He provides detailed explanations of Bhaktapur Durbar Square, Changu Narayan Temple, and Nyatapola Temple, connecting visitors with the historical and artistic legacy of the area."
+    "fee": 150,
+    "rating": 4.9,
+    "citizenship_card": "https://example.com/rameshbasnet-citizenship",
+    "guide_certificate": "https://example.com/rameshbasnet-certificate",
+    "places": [
+      "Gorkha Durbar Square",
+      "Manakamana Temple",
+      "Siddhikali Temple"
+    ],
+    "description": "Ramesh Basnet is a knowledgeable religious guide from Gorkha, specializing in spiritual tours. He offers deep insights into the cultural and historical significance of Gorkha Durbar Square, Manakamana Temple, and Siddhikali Temple."
+  },
+  {
+    "id": 10,
+    "name": "Deepak Shrestha",
+    "email": "deepakshrestha@example.com",
+    "password": "deepakpass",
+    "language": "Nepali",
+    "speciality": "cultural",
+    "currently_in": "Bhaktapur",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=52",
+    "contact_no": "+977-9810000010",
+    "social_media": {
+      "facebook": "https://facebook.com/deepakshrestha",
+      "instagram": "https://instagram.com/deepakshrestha",
+      "linkedin": "https://linkedin.com/in/deepakshrestha"
     },
-    {
-      "id": 11,
-      "name": "Suman Gurung",
-      "email": "sumangurung@example.com",
-      "password": "sumanpass",
-      "language": "Nepali",
-      "speciality": "mountain",
-      "currently_in": "Pokhara",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=48",
-      "contact_no": "+977-9810000011",
-      "social_media": {
-        "facebook": "https://facebook.com/sumangurung",
-        "instagram": "https://instagram.com/sumangurung",
-        "linkedin": "https://linkedin.com/in/sumangurung"
-      },
-      "fee": 300,
-      "rating":4.7,
-      "citizenship_card": "https://example.com/sumangurung-citizenship",
-      "guide_certificate": "https://example.com/sumangurung-certificate",
-      "places": ["Sarangkot", "Poon Hill", "Annapurna Base Camp"],
-      "description": "Suman Gurung is an experienced mountain guide based in Pokhara, specializing in treks to Sarangkot, Poon Hill, and Annapurna Base Camp. His deep knowledge of the trails and local culture ensures a safe and enriching trekking experience for adventurers."
+    "fee": 200,
+    "rating": 4.5,
+    "citizenship_card": "https://example.com/deepakshrestha-citizenship",
+    "guide_certificate": "https://example.com/deepakshrestha-certificate",
+    "places": [
+      "Bhaktapur Durbar Square",
+      "Changu Narayan Temple",
+      "Nyatapola Temple"
+    ],
+    "description": "Deepak Shrestha is a cultural guide in Bhaktapur, offering in-depth tours of the city's rich heritage sites. He provides detailed explanations of Bhaktapur Durbar Square, Changu Narayan Temple, and Nyatapola Temple, connecting visitors with the historical and artistic legacy of the area."
+  },
+  {
+    "id": 11,
+    "name": "Suman Gurung",
+    "email": "sumangurung@example.com",
+    "password": "sumanpass",
+    "language": "Nepali",
+    "speciality": "mountain",
+    "currently_in": "Pokhara",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=48",
+    "contact_no": "+977-9810000011",
+    "social_media": {
+      "facebook": "https://facebook.com/sumangurung",
+      "instagram": "https://instagram.com/sumangurung",
+      "linkedin": "https://linkedin.com/in/sumangurung"
     },
-    {
-      "id": 12,
-      "name": "Aarati Tamang",
-      "email": "aaratitamang@example.com",
-      "password": "aaratipass",
-      "language": "Nepali, English",
-      "speciality": "cultural",
-      "currently_in": "Bhaktapur",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=52",
-      "contact_no": "+977-9810000012",
-      "social_media": {
-        "facebook": "https://facebook.com/aaratitamang",
-        "instagram": "https://instagram.com/aaratitamang",
-        "linkedin": "https://linkedin.com/in/aaratitamang"
-      },
-      "fee": 250,
-      "rating":4.5,
-      "citizenship_card": "https://example.com/aaratitamang-citizenship",
-      "guide_certificate": "https://example.com/aaratitamang-certificate",
-      "places": ["Bhaktapur Durbar Square", "Changu Narayan Temple", "Nagarkot"],
-      "description": "Aarati Tamang is a cultural guide based in Bhaktapur, specializing in tours of historic sites like Bhaktapur Durbar Square, Changu Narayan Temple, and Nagarkot. Her passion for Nepali culture and history makes her an exceptional guide for those looking to explore the rich heritage of the Kathmandu Valley."
+    "fee": 300,
+    "rating": 4.7,
+    "citizenship_card": "https://example.com/sumangurung-citizenship",
+    "guide_certificate": "https://example.com/sumangurung-certificate",
+    "places": [
+      "Sarangkot",
+      "Poon Hill",
+      "Annapurna Base Camp"
+    ],
+    "description": "Suman Gurung is an experienced mountain guide based in Pokhara, specializing in treks to Sarangkot, Poon Hill, and Annapurna Base Camp. His deep knowledge of the trails and local culture ensures a safe and enriching trekking experience for adventurers."
+  },
+  {
+    "id": 12,
+    "name": "Aarati Tamang",
+    "email": "aaratitamang@example.com",
+    "password": "aaratipass",
+    "language": "Nepali, English",
+    "speciality": "cultural",
+    "currently_in": "Bhaktapur",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=52",
+    "contact_no": "+977-9810000012",
+    "social_media": {
+      "facebook": "https://facebook.com/aaratitamang",
+      "instagram": "https://instagram.com/aaratitamang",
+      "linkedin": "https://linkedin.com/in/aaratitamang"
     },
-    {
-      "id": 13,
-      "name": "Suman Shrestha",
-      "email": "sumanshrestha@example.com",
-      "password": "sumanpass",
-      "language": "Nepali, Hindi, English",
-      "speciality": "trekking",
-      "currently_in": "Pokhara",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=53",
-      "contact_no": "+977-9810000013",
-      "social_media": {
-        "facebook": "https://facebook.com/sumanshrestha",
-        "instagram": "https://instagram.com/sumanshrestha",
-        "linkedin": "https://linkedin.com/in/sumanshrestha"
-      },
-      "fee": 300,
-      "rating":4.7,
-      "citizenship_card": "https://example.com/sumanshrestha-citizenship",
-      "guide_certificate": "https://example.com/sumanshrestha-certificate",
-      "places": ["Annapurna Base Camp", "Poon Hill", "Mardi Himal"],
-      "description": "Suman Shrestha is an experienced trekking guide based in Pokhara, specializing in popular trekking routes like Annapurna Base Camp, Poon Hill, and Mardi Himal. His expertise in navigating the trails and deep knowledge of the local culture make him an ideal guide for adventure seekers."
+    "fee": 250,
+    "rating": 4.5,
+    "citizenship_card": "https://example.com/aaratitamang-citizenship",
+    "guide_certificate": "https://example.com/aaratitamang-certificate",
+    "places": [
+      "Bhaktapur Durbar Square",
+      "Changu Narayan Temple",
+      "Nagarkot"
+    ],
+    "description": "Aarati Tamang is a cultural guide based in Bhaktapur, specializing in tours of historic sites like Bhaktapur Durbar Square, Changu Narayan Temple, and Nagarkot. Her passion for Nepali culture and history makes her an exceptional guide for those looking to explore the rich heritage of the Kathmandu Valley."
+  },
+  {
+    "id": 13,
+    "name": "Suman Shrestha",
+    "email": "sumanshrestha@example.com",
+    "password": "sumanpass",
+    "language": "Nepali, Hindi, English",
+    "speciality": "trekking",
+    "currently_in": "Pokhara",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=53",
+    "contact_no": "+977-9810000013",
+    "social_media": {
+      "facebook": "https://facebook.com/sumanshrestha",
+      "instagram": "https://instagram.com/sumanshrestha",
+      "linkedin": "https://linkedin.com/in/sumanshrestha"
     },
-    {
-      "id": 14,
-      "name": "Ravi Thapa",
-      "email": "ravithapa@example.com",
-      "password": "ravipass",
-      "language": "Nepali, English",
-      "speciality": "cultural tours",
-      "currently_in": "Lalitpur",
-      "available": true,
-      "image": "https://i.pravatar.cc/333?img=54",
-      "contact_no": "+977-9810000014",
-      "social_media": {
-        "facebook": "https://facebook.com/ravithapa",
-        "instagram": "https://instagram.com/ravithapa",
-        "linkedin": "https://linkedin.com/in/ravithapa"
-      },
-      "fee": 250,
-      "rating":4.9,
-      "citizenship_card": "https://example.com/ravithapa-citizenship",
-      "guide_certificate": "https://example.com/ravithapa-certificate",
-      "places": ["Patan Durbar Square", "Bhaktapur Durbar Square", "Boudhanath Stupa"],
-      "description": "Ravi Thapa is a cultural tour guide from Lalitpur, with a deep passion for showcasing Nepal's rich heritage. He specializes in guiding tours to iconic cultural landmarks such as Patan Durbar Square, Bhaktapur Durbar Square, and Boudhanath Stupa."
+    "fee": 300,
+    "rating": 4.7,
+    "citizenship_card": "https://example.com/sumanshrestha-citizenship",
+    "guide_certificate": "https://example.com/sumanshrestha-certificate",
+    "places": [
+      "Annapurna Base Camp",
+      "Poon Hill",
+      "Mardi Himal"
+    ],
+    "description": "Suman Shrestha is an experienced trekking guide based in Pokhara, specializing in popular trekking routes like Annapurna Base Camp, Poon Hill, and Mardi Himal. His expertise in navigating the trails and deep knowledge of the local culture make him an ideal guide for adventure seekers."
+  },
+  {
+    "id": 14,
+    "name": "Ravi Thapa",
+    "email": "ravithapa@example.com",
+    "password": "ravipass",
+    "language": "Nepali, English",
+    "speciality": "cultural tours",
+    "currently_in": "Lalitpur",
+    "available": true,
+    "image": "https://i.pravatar.cc/333?img=54",
+    "contact_no": "+977-9810000014",
+    "social_media": {
+      "facebook": "https://facebook.com/ravithapa",
+      "instagram": "https://instagram.com/ravithapa",
+      "linkedin": "https://linkedin.com/in/ravithapa"
     },
-    {
-      "id": 15,
-      "name": "Sunita Lamichhane",
-      "email": "sunitalamichhane@example.com",
-      "password": "sunitapass",
-      "language": "Nepali, English",
-      "speciality": "religious",
-      "currently_in": "Taplejung",
-      "available": true,
-      "image": "https://i.pravatar.cc/299?img=29",
-      "contact_no": "+977-9810000015",
-      "social_media": {
-        "facebook": "https://facebook.com/sunitalamichhane",
-        "instagram": "https://instagram.com/sunitalamichhane",
-        "linkedin": "https://linkedin.com/in/sunitalamichhane"
-      },
-      "fee": 200,
-      "rating":4.2,
-      "citizenship_card": "https://example.com/sunitalamichhane-citizenship",
-      "guide_certificate": "https://example.com/sunitalamichhane-certificate",
-      "places": ["Taplejung", "Ilam", "Pathibhara Temple"],
-      "description": "Sunita Lamichhane is a dedicated guide specializing in religious and spiritual tours in the eastern region of Nepal. Based in Taplejung, she offers insightful tours to sacred sites such as Pathibhara Temple and other revered locations in Taplejung and Ilam."
-    }
-  ]
+    "fee": 250,
+    "rating": 4.9,
+    "citizenship_card": "https://example.com/ravithapa-citizenship",
+    "guide_certificate": "https://example.com/ravithapa-certificate",
+    "places": [
+      "Patan Durbar Square",
+      "Bhaktapur Durbar Square",
+      "Boudhanath Stupa"
+    ],
+    "description": "Ravi Thapa is a cultural tour guide from Lalitpur, with a deep passion for showcasing Nepal's rich heritage. He specializes in guiding tours to iconic cultural landmarks such as Patan Durbar Square, Bhaktapur Durbar Square, and Boudhanath Stupa."
+  },
+  {
+    "id": 15,
+    "name": "Sunita Lamichhane",
+    "email": "sunitalamichhane@example.com",
+    "password": "sunitapass",
+    "language": "Nepali, English",
+    "speciality": "religious",
+    "currently_in": "Taplejung",
+    "available": true,
+    "image": "https://i.pravatar.cc/299?img=29",
+    "contact_no": "+977-9810000015",
+    "social_media": {
+      "facebook": "https://facebook.com/sunitalamichhane",
+      "instagram": "https://instagram.com/sunitalamichhane",
+      "linkedin": "https://linkedin.com/in/sunitalamichhane"
+    },
+    "fee": 200,
+    "rating": 4.2,
+    "citizenship_card": "https://example.com/sunitalamichhane-citizenship",
+    "guide_certificate": "https://example.com/sunitalamichhane-certificate",
+    "places": [
+      "Taplejung",
+      "Ilam",
+      "Pathibhara Temple"
+    ],
+    "description": "Sunita Lamichhane is a dedicated guide specializing in religious and spiritual tours in the eastern region of Nepal. Based in Taplejung, she offers insightful tours to sacred sites such as Pathibhara Temple and other revered locations in Taplejung and Ilam."
+  }
+]

@@ -1,9 +1,11 @@
 import React from 'react'
-import LoginForm from '../../../components/LoginForm'
+import TouristSettings from '../../components/TouristSettings'
 const page = async () => {
+
   return (
     <div className='w-full grainy'>
-        <LoginForm />
+
+        <TouristSettings/>
     </div>
   )
 }

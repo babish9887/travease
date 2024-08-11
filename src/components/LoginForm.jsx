@@ -27,6 +27,7 @@ const LoginForm = () => {
                         toast.success('User Login Successful',{id:toastId})
                         setTimeout(()=>{
                               router.push('/')
+                              window.location.href="/"
                         },3000)
                   } else
                         toast.error('InCorrect Credentials',{id:toastId})

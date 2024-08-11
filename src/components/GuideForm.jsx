@@ -122,7 +122,7 @@ const handleSubmit = async () => {
             body: certData,
           }) : { ok: true };
     
-          if (profileRes.ok && ctzRes.ok && certRes.ok) {
+          if (profileRes.ok && ctzRes.ok || certRes.ok) {
             toast.success("Signed up successfully", { id: toastId });
             setTimeout(()=>{
                   router.push('/user/login')
@@ -152,12 +152,9 @@ const handleSubmit = async () => {
        document.getElementById('citizenship').value='';
        if(certifiedGuide)
             document.getElementById('certificate').value='';
-       
 
       }
     };
-    
-    
 
   return (
     <div className="w-full mx-auto p-4 h-auto min-h-screen flex flex-col justify-center sm:w-2/3 md:w-3/6 lg:w-2/6 pb-12">
@@ -333,6 +330,7 @@ const handleSubmit = async () => {
               </label>
               <input
                 type="file"
+                id='certificate'
                 className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
                 disabled={loading}
               />

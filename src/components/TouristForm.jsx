@@ -41,16 +41,24 @@ const GuideForm = () => {
   const handleSubmit = async () => {
       setIsLoading(true)
       toastId=toast.loading("Signing Up")
-      const image=document.getElementById('pp').value
+      const image=document.getElementById('pp')
+      const profileImage = profileInput ? profileInput.files[0] : null;
+      const filename = `${name.replace(" ", "_")}_${Math.floor(Math.random() * (999999 - 100 + 1)) + 100}`;
+
      try {
        await axios.post('/api/touristsignup',{
             name,
             email,
             password,
             number,
-            nationality:value
-       }).then((res)=>{
+            nationality:value,
+            image:filename
+       }).then(async (res)=>{
             if(res.data.success){
+                  const profileRes = await fetch(`/api/uploadImage/${filename}`, {
+                        method: "POST",
+                        body: profileData,
+                      });
                   toast.success("Signedup successfully", {id:toastId})
             }
             else

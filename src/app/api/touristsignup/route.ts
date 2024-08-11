@@ -2,7 +2,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { NextResponse } from 'next/server';
-import { sendEmail } from '@/lib/mailer';
 import touristList from '../../../../tourist.json'
 
 // Define the path to the JSON file
@@ -10,7 +9,7 @@ const filePath = path.join(process.cwd(), '/tourist.json');
 
 export async function POST(req) {
     try {
-        const {name, email, password, number, nationality} = await req.json();
+        const {name, image,email, password, number, nationality} = await req.json();
       
         // Read existing data
         const data = await fs.readFile(filePath, 'utf8');
@@ -36,7 +35,8 @@ export async function POST(req) {
             email,
             password, 
             contact_no:number,
-            nationality
+            nationality,
+            image
       }
 
         guides.push(guide);
