@@ -31,33 +31,43 @@ const GuideForm = () => {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const toastId = "";
+  const [name, setName]=useState("")
+  const [email, setEmail]=useState("")
+  const [password, setPassword]=useState("")
+  let toastId=""
+
+
 
   const handleSubmit = async () => {
-    setIsLoading(true);
-    toast.loading("Signing Up", { id: toastId });
-    const image = document.getElementById("pp").value;
-    try {
-      await axios
-        .post("/api/touristsignup", {
-          name,
-          email,
-          password,
-          number,
-          nationality: value,
-        })
-        .then((res) => {
-          if (res.data.success) {
-            toast.success("Signedup successfully", { id: toastId });
-          } else toast.error("Failed", { id: toastId });
-        });
-    } catch (error) {
-      console.log(error);
-      toast.error(error, { id: toastId });
-    }
+      setIsLoading(true)
+      toastId=toast.loading("Signing Up")
+      const image=document.getElementById('pp').value
+     try {
+       await axios.post('/api/touristsignup',{
+            name,
+            email,
+            password,
+            number,
+            nationality:value
+       }).then((res)=>{
+            if(res.data.success){
+                  toast.success("Signedup successfully", {id:toastId})
+            }
+            else
+            toast.error("Failed", {id:toastId})
+       })
+     } catch (error) {
+      console.log(error)
+      toast.error(error, {id:toastId})
+     } finally{
+      setIsLoading(false)
+      setName("")
+      setEmail("")
+      setPassword("")
+      setNumber("")
+      setValue("")
+      document.getElementById('pp').value=''
+     }
   };
 
   return (

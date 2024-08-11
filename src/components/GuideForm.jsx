@@ -19,8 +19,7 @@ import {
 } from "./ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
-import Select from "react-select";
-import { Checkbox } from "@radix-ui/react-checkbox";
+import Select from 'react-select'
 import toast from "react-hot-toast";
 
 const GuideForm = () => {
@@ -36,11 +35,10 @@ const GuideForm = () => {
     lng: 0,
   });
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [certifiedGuide, setCertifiedGuide] = useState(false);
-  const [currentlyIn, setCurrentlyIn] = useState("");
+  const [name, setName]=useState("")
+  const [email, setEmail]=useState("")
+  const [password, setPassword]=useState("")
+  const [certifiedGuide, setCertifiedGuide]=useState(false)
 
   const [fee, setFee] = useState(0);
 
@@ -64,15 +62,37 @@ const GuideForm = () => {
 
   let toastId = "";
 
-  const handleSubmit = async () => {
-    setIsLoading(true);
-    toast.loading("Signing Up", { id: toastId });
-    // const image=document.getElementById('pp').value
-
-    console.log(value, selectedOptions, places, certifiedGuide);
-    try {
-      await axios
-        .post("/api/guidesignup", {
+const handleSubmit = async () => {
+      setIsLoading(true);
+      toastId = toast.loading("Signing Up");
+    
+      let profileData = new FormData();
+      let ctzData = new FormData();
+      let certData = new FormData();
+    
+      // Get file input elements
+      const profileInput = document.getElementById('profile');
+      const citizenshipInput = document.getElementById('citizenship');
+      const certificateInput = document.getElementById('certificate');
+    
+      // Check if inputs are not null and get the files
+      const profileImage = profileInput ? profileInput.files[0] : null;
+      const citizenshipImage = citizenshipInput ? citizenshipInput.files[0] : null;
+      const certificateImage = certificateInput ? certificateInput.files[0] : null;
+    
+      // Generate filenames
+      const filename = `${name.replace(" ", "_")}_${Math.floor(Math.random() * (999999 - 100 + 1)) + 100}`;
+      const ctzName = `citizenship_${name.replace(" ", "_")}_${Math.floor(Math.random() * (999999 - 100 + 1)) + 100}`;
+      const certName = `certificate_${name.replace(" ", "_")}_${Math.floor(Math.random() * (999999 - 100 + 1)) + 100}`;
+    
+      // Append files to FormData objects
+      if (profileImage) profileData.append("file", profileImage);
+      if (citizenshipImage) ctzData.append("file", citizenshipImage);
+      if (certificateImage) certData.append("file", certificateImage);
+    
+      try {
+        // Send data to backend
+        const res = await axios.post('/api/guidesignup', {
           name,
           email,
           password,
@@ -81,19 +101,63 @@ const GuideForm = () => {
           language: selectedOptions,
           places,
           fee,
-        })
-        .then((res) => {
-          if (res.data.success) {
-            toast.success("Signedup successfully", { id: toastId });
-          } else toast.error("Failed", { id: toastId });
+          image: filename,
+          citizenship_card: ctzName,
+          guide_certificate: certifiedGuide ? certName : "" 
         });
-    } catch (error) {
-      console.log(error);
-      toast.error(error, { id: toastId });
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    
+        if (res.data.success) {
+          const profileRes = await fetch(`/api/uploadImage/${filename}`, {
+            method: "POST",
+            body: profileData,
+          });
+    
+          const ctzRes = citizenshipImage ? await fetch(`/api/uploadImage/${ctzName}`, {
+            method: "POST",
+            body: ctzData,
+          }) : { ok: true };
+    
+          const certRes = certificateImage ? await fetch(`/api/uploadImage/${certName}`, {
+            method: "POST",
+            body: certData,
+          }) : { ok: true };
+    
+          if (profileRes.ok && ctzRes.ok && certRes.ok) {
+            toast.success("Signed up successfully", { id: toastId });
+            setTimeout(()=>{
+                  router.push('/user/login')
+            },3000)
+          } else {
+            toast.error("Failed to upload files", { id: toastId });
+          }
+        } else {
+          toast.error("Failed to sign up", { id: toastId });
+        }
+      } catch (error) {
+        console.error(error);
+        toast.error("An error occurred", { id: toastId });
+      } finally {
+        setIsLoading(false);
+        setName("")
+        setEmail("")
+        setNumber("")
+       setSelectedOptions([])
+       setFee(0)
+       setValue("")
+       setPlaces([])
+       setPassword("")
+      
+       
+       document.getElementById('profile').value='';
+       document.getElementById('citizenship').value='';
+       if(certifiedGuide)
+            document.getElementById('certificate').value='';
+       
+
+      }
+    };
+    
+    
 
   return (
     <div className="w-full mx-auto p-4 h-auto min-h-screen flex flex-col justify-center sm:w-2/3 md:w-3/6 lg:w-2/6 pb-12">
@@ -168,6 +232,7 @@ const GuideForm = () => {
             Citizenship
           </label>
           <input
+          id="citizenship"
             type="file"
             className="border-2 border-gray-200 outline-none p-2 rounded-md focus:border-gray-300"
             disabled={loading}

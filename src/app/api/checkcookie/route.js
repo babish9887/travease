@@ -15,10 +15,10 @@ export async function GET(request) {
       if (user) {
         return NextResponse.json({ success: true, message: "User is logged in" });
       } else {
-        return NextResponse.json({ success: false, message: "Invalid session" }, { status: 401 });
+        return NextResponse.json({ success: false, message: "Invalid session" }, { status: 200 });
       }
     } else {
-      return NextResponse.json({ success: false, message: "No session found" }, { status: 401 });
+      return NextResponse.json({ success: false, message: "No session found" }, { status: 200 });
     }
   } catch (error) {
     console.error(error);

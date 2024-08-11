@@ -8,40 +8,40 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const LoginForm = () => {
-  const router = useRouter();
-  const [loading, setIsLoading] = useState(false);
-  const [resetPassword, setResetPassword] = useState(false);
+    const router = useRouter();
+    const [loading, setIsLoading] = useState(false);
+    const [resetPassword, setResetPassword] = useState(false);
+    
+    // Input values
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+      let toastId=""
+    const handleSubmit = async () => {
+      toastId=toast.loading('Logging In')
+     setIsLoading(true);
+     try{
+            await axios.post('/api/login',{email, password})
+            .then((res)=>{
+                  if(res.data.success==true){
+                        toast.success('User Login Successful',{id:toastId})
+                        setTimeout(()=>{
+                              router.push('/')
+                        },3000)
+                  } else
+                        toast.error('InCorrect Credentials',{id:toastId})
+                  console.log(res)
+            }).catch((e)=>{
+                  console.log(e)
+                  toast.error(e.message,{id:toastId})
 
-  // Input values
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const toastId = "";
-  const handleSubmit = async () => {
-    toast.loading("Logging In", { id: toastId });
-    setIsLoading(true);
-    try {
-      await axios
-        .post("/api/login", { email, password })
-        .then((res) => {
-          if (res.data.success == true) {
-            toast.success("User Login Successful", { id: toastId });
-            setTimeout(() => {
-              router.push("/");
-            }, 3000);
-          } else toast.error("InCorrect Credentials", { id: toastId });
-          console.log(res);
-        })
-        .catch((e) => {
-          console.log(e);
-          toast.error(e.message, { id: toastId });
-        });
-    } catch (e) {
-      console.log(e);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+            })
+     } catch (e){
+      console.log(e)
+     } finally{
+      setIsLoading(false)
+     }
+    };
 
   const handleForgotPassword = async () => {
     setIsLoading(true);
