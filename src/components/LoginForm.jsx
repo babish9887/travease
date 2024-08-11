@@ -17,9 +17,9 @@ const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-      const toastId=""
+      let toastId=""
     const handleSubmit = async () => {
-      toast.loading('Logging In', {id: toastId})
+      toastId=toast.loading('Logging In')
      setIsLoading(true);
      try{
             await axios.post('/api/login',{email, password})

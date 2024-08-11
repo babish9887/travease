@@ -2,13 +2,13 @@ import fs from 'fs/promises';
 import path from 'path';
 import { NextResponse } from 'next/server';
 import guidesList from '../../../../guide.json'
-
 const filePath = path.join(process.cwd(), '/guide.json');
 
 export async function POST(req) {
     try {
-        const {name, email, password, number, currently_in, language, places, fee} = await req.json();
-            console.log(name, email, password, number, currently_in, language, places, fee)
+        const {name, email, password, number, currently_in, language, places,fee, image, guide_certificate,citizenship_card} = await req.json();
+            console.log(name, email, password, number, currently_in, language, places,fee, image)
+
         const data = await fs.readFile(filePath, 'utf8');
         let guides;
 
@@ -34,9 +34,9 @@ export async function POST(req) {
             places,
             fee,
             available:true,
-            image:"",
-            citizenship_card:"",
-            guide_certificate:""
+            image,
+            citizenship_card,
+            guide_certificate
       }
 
         guides.push(guide);

@@ -40,13 +40,13 @@ const GuideForm = () => {
   const [name, setName]=useState("")
   const [email, setEmail]=useState("")
   const [password, setPassword]=useState("")
-  const toastId=""
+  let toastId=""
 
 
 
   const handleSubmit = async () => {
       setIsLoading(true)
-      toast.loading("Signing Up",{id:toastId})
+      toastId=toast.loading("Signing Up")
       const image=document.getElementById('pp').value
      try {
        await axios.post('/api/touristsignup',{
@@ -65,6 +65,14 @@ const GuideForm = () => {
      } catch (error) {
       console.log(error)
       toast.error(error, {id:toastId})
+     } finally{
+      setIsLoading(false)
+      setName("")
+      setEmail("")
+      setPassword("")
+      setNumber("")
+      setValue("")
+      document.getElementById('pp').value=''
      }
   };
 
