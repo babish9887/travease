@@ -1,11 +1,12 @@
-import * as React from "react"
+import * as React from "react";
 
-
-import { cn } from "../../lib/utils"
+import { cn } from "../../lib/utils";
 import { Search } from "lucide-react";
 import { Button } from "./button";
 
-const Input = React.forwardRef(({ className, type, icon,...props }, ref) => {
+const Input = React.forwardRef(({ className, type, icon, ...props }, ref) => {
+  console.log(icon);
+
   return (
     <div className="relative flex gap-2 items-center">
       <input
@@ -17,14 +18,16 @@ const Input = React.forwardRef(({ className, type, icon,...props }, ref) => {
         ref={ref}
         {...props}
       />
-      {!props.icon ? (
+      {icon ? (
         <Search className="absolute right-3 cursor-pointer w-5 h-5 text-orange" />
       ) : (
-        <Button className="absolute right-0 bg-orange hover:bg-orange/90">Subscribe</Button>
+        <Button className="absolute right-0 bg-orange hover:bg-orange/90">
+          Subscribe
+        </Button>
       )}
     </div>
   );
 });
 Input.displayName = "Input";
 
-export { Input }
+export { Input };

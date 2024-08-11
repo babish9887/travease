@@ -44,7 +44,7 @@ function NewUserPage() {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
           Explore the World with a Local Guide
         </h2>
-        <p className="mt-5 text-gray-600">
+        <p className="mt-5 font-medium text-gray-800">
           Discover unique destinations with experienced guides or offer your
           expertise as a local guide.
         </p>
@@ -58,8 +58,12 @@ function NewUserPage() {
           >
             <Backpack className="w-12 h-10 text-white bg-orange p-2 rounded-lg" />
             <div className="flex flex-col w-full">
-              <h2 className="text-lg font-semibold uppercase">Tourist</h2>
-              <p className="text-sm text-gray-500">I want to be Tourist</p>
+              <h2 className="text-lg font-semibold uppercase text-black">
+                Tourist
+              </h2>
+              <p className="text-base text-gray-400 font-medium">
+                I want to be Tourist
+              </p>
             </div>
             <IoIosArrowForward className="w-6 h-6 justify-self-end" />
           </div>
@@ -72,16 +76,21 @@ function NewUserPage() {
           >
             <Map className="w-12 h-10 text-white bg-orange p-2 rounded-lg" />
             <div className="flex flex-col w-full">
-              <h2 className="text-lg font-semibold uppercase">Guide</h2>
-              <p className="text-sm text-gray-500">
+              <h2 className="text-lg font-semibold text-black uppercase">
+                Guide
+              </h2>
+              <p className="text-base text-gray-400 font-medium">
                 I want to Guide the Tourist
               </p>
             </div>
             <IoIosArrowForward className="w-6 h-6 justify-self-end" />
           </div>
 
-          <Button className="text-md text-white hover:bg-orange/90" onClick={() => handleClick()}>
-            Continue <IoIosArrowForward className="w-6 h-6 ml-2" />
+          <Button
+            className="text-md text-white hover:bg-orange/90"
+            onClick={() => handleClick()}
+          >
+            Continue <IoIosArrowForward className="w-5 h-5 ml-2" />
           </Button>
         </div>
       </div>

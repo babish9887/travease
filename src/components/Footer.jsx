@@ -19,7 +19,7 @@ const Footer = () => {
             type="text"
             placeholder="Example@gmail.com"
             className=" font-medium rounded-xl w-96 text-base"
-            icon={"false"}
+            icon={false}
           />
         </div>
       </div>

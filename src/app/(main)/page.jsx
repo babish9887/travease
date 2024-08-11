@@ -4,6 +4,7 @@ import { Input } from "../../components/ui/input";
 import Link from "next/link";
 import React, { useState } from "react";
 import guideList from "../../../guide.json";
+import { Badge } from "../../components/ui/badge";
 
 const page = () => {
   const [search, setSearch] = useState();
@@ -20,9 +21,10 @@ const page = () => {
   };
 
   return (
-    <main className="w-full px-10 relative min-h-screen bg-main-background">
+    <main className="w-full px-10 relative min-h-screen bg-main-background pb-5">
       <div className="w-full flex justify-center items-center mt-5 pt-6">
         <Input
+          icon
           type="text"
           placeholder="Search..."
           value={search}
@@ -62,13 +64,21 @@ const page = () => {
           {guideList.map((item) => {
             return (
               <div
-                className={`w-80 sm:w-60 h-80 xl:w-72 aspect-square bg-secondary-background rounded-3xl flex flex-col justify-between items-center gap-y-4 hover:scale-105 transition-all cursor-pointer`}
+                className={`w-80 sm:w-60 h-[22rem] xl:w-72 aspect-square bg-secondary-background rounded-3xl flex flex-col justify-end gap-y-4 hover:scale-105 transition-all cursor-pointer bg-no-repeat bg-center bg-cover`}
+                style={{ backgroundImage: `url(${item.image})` }}
                 key={item.id}
               >
-                <img src={item.image} alt="" className="object-cover h-3/4 w-full rounded-t-3xl" />
-                <div className="flex justify-center items-center flex-col rounded-t-2xl w-full">
+                {/* <img src={item.image} alt="" className="object-cover h-3/5 w-full rounded-t-3xl" /> */}
+                <div className="flex py-4 px-6 flex-col rounded-3xl w-full h-2/5 bg-main-green text-white items-start">
                   <h1 className="text-xl font-medium">{item.name}</h1>
                   <p className="text-lg font-thin">{item.currently_in}</p>
+                  <Badge
+                    className={`mt-4 ${
+                      item.available ? "bg-green-600" : "bg-red-600"
+                    }`}
+                  >
+                    {item.available ? "Available" : "Not Available"}
+                  </Badge>
                 </div>
               </div>
             );
