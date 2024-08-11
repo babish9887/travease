@@ -1,4 +1,10 @@
 "use client";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
 import { Button } from "../../../../components/ui/button";
 import { Facebook, Linkedin, Instagram, icons } from "lucide-react";
 import Image from "next/image";
@@ -14,46 +20,54 @@ function page() {
   const pathSegments = pathname.split("/");
   const id = pathSegments[pathSegments.length - 1]; // Get the last segment
   return (
-    <>
-      <div className="w-full  h-[calc(100vh-6rem)] flex justify-center items-center md:px-24 md:py-16 bg-slate-50 ">
-        <div className=" relative w-full h-full bg-gray-200 rounded-2xl shadow-xl flex justify-center items-center overflow-hidden">
-          <div className="w-2/5 h-full bg-gray-200">
-            <Image
-              src="https://i.pravatar.cc/34545"
-              className="w-full h-full"
-              width={400}
-              height={400}
-            />
-          </div>
-          <div className="w-3/5 h-full bg-gray-300 flex justify-center items-center px-12 py-16">
-            <div className="w-full h-full gap-3">
-              <h1 className="text-5xl font-bold mb-4">Babish Chaudhary</h1>
-              <p className="text-xl font-light">Currently In: Kathmandu</p>
-              <p className="text-xl font-light">ContactNo: +9779098786576</p>
-              <p className="text-xl font-light"></p>
-
-              <p className="text-xl font-light">
-                Languages Known: Nepali, English, Hindi
-              </p>
-              <p className="text-xl font-light ">
-                Speciality: Adventure, Nature, City
-              </p>
-              <p className="mb-4 font-semibold text-base">
-                Price: $123 per Day
-              </p>
-              <p>Know More about guide</p>
-              <div className="flex gap-4 mb-4">
-                <FaFacebook className={iconStyle} />
-                <FaInstagram className={iconStyle} />
-                <FaLinkedin className={iconStyle} />
-              </div>
-
-              <Button>Book Guide</Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <div className="w-full min-h-screen justify-center items-center px-10">
+      <Card className="w-full max-w-[48rem] mx-auto relative flex-row mt-10">
+        <CardHeader
+          shadow={false}
+          floated={false}
+          className="m-0 w-2/5 shrink-0 rounded-r-none"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+            alt="card-image"
+            className="h-full w-full object-cover"
+          />
+        </CardHeader>
+        <CardBody>
+          <Typography variant="h6" color="gray" className="mb-4 uppercase">
+            startups
+          </Typography>
+          <Typography variant="h4" color="blue-gray" className="mb-2">
+            Lyft launching cross-platform service this week
+          </Typography>
+          <Typography color="gray" className="mb-8 font-normal">
+            Like so many organizations these days, Autodesk is a company in
+            transition. It was until recently a traditional boxed software
+            company selling licenses. Yet its own business model disruption is
+            only part of the story
+          </Typography>
+          <a href="#" className="inline-block">
+            <Button variant="text" className="flex items-center gap-2">
+              Learn More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                className="h-4 w-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </Button>
+          </a>
+        </CardBody>
+      </Card>
+    </div>
   );
 }
 

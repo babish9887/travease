@@ -14,6 +14,7 @@ import {
   Tooltip,
   Typography,
 } from "@material-tailwind/react";
+import { Globe, MapPin } from "lucide-react";
 
 const page = () => {
   const [search, setSearch] = useState();
@@ -68,125 +69,122 @@ const page = () => {
             className="font-medium rounded-xl w-[24rem] lg:w-[32rem] px-10 py-8 text-base"
           />
         </div>
-        <div className="w-auto grid mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="w-auto grid mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {guideList.map((item) => {
             return (
-              // <div
-              //   className={`w-80 sm:w-60 h-[22rem] xl:w-72 aspect-square bg-secondary-background rounded-3xl flex flex-col justify-end gap-y-4 hover:scale-105 transition-all cursor-pointer bg-no-repeat bg-center bg-cover`}
-              //   style={{ backgroundImage: `url(${item.image})` }}
-              //   key={item.id}
-              // >
-              //   {/* <img src={item.image} alt="" className="object-cover h-3/5 w-full rounded-t-3xl" /> */}
-              //   <div className="flex py-4 px-6 flex-col rounded-3xl w-full h-2/5 bg-main-green text-white items-start">
-              //     <h1 className="text-xl font-medium">{item.name}</h1>
-              //     <p className="text-lg font-thin">{item.currently_in}</p>
-              //     <Badge
-              //       className={`mt-4 ${
-              //         item.available ? "bg-green-600" : "bg-red-600"
-              //       }`}
-              //     >
-              //       {item.available ? "Available" : "Not Available"}
-              //     </Badge>
-              //   </div>
-              // </div>
-              // <Card className="w-auto max-w-[26rem] h-[26rem] shadow-lg">
-              //   <CardHeader floated={false} color="blue-gray">
-              //     <img src={item.image} />
-              //     <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+              // <Card className="">
+              //   <CardHeader shadow={false} floated={false} className="h-64">
+              //     <img
+              //       src={item.image}
+              //       alt="card-image"
+              //       className="h-full w-full object-cover"
+              //     />
               //   </CardHeader>
-              //   <CardBody className="px-5 py-2">
-              //     <div className="mb-3 flex items-center justify-between">
-              //       <Typography
-              //         variant="h5"
-              //         color="blue-gray"
-              //         className="font-medium"
-              //       >
+              //   <CardBody>
+              //     <div className="mb-2 flex items-center justify-between">
+              //       <Typography color="blue-gray" className="font-medium">
               //         {item.name}, {item.currently_in}
               //       </Typography>
               //       <Typography
               //         color="blue-gray"
-              //         className="flex items-center gap-1.5 font-normal"
+              //         className="font-medium relative"
               //       >
-              //         <svg
-              //           xmlns="http://www.w3.org/2000/svg"
-              //           viewBox="0 0 24 24"
-              //           fill="currentColor"
-              //           className="-mt-0.5 h-5 w-5 text-yellow-700"
-              //         >
-              //           <path
-              //             fillRule="evenodd"
-              //             d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-              //             clipRule="evenodd"
-              //           />
-              //         </svg>
-              //         {item.rating}
+              //         <sup className="absolute -left-2 top-[1px] text-sm">
+              //           $
+              //         </sup>
+              //         {item.fee}/h
               //       </Typography>
-              //     </div>
-              //     <Typography color="gray" className="truncate">
-              //       {item.description}
-              //     </Typography>
-              //     <div className="group mt-4 inline-flex flex-wrap items-center gap-3">
-              //       <Badge
+              //       {/* <Badge
               //         className={`${
               //           item.available ? "bg-green-600" : "bg-red-600"
-              //         } px-2`}
+              //         } px-1`}
               //       >
               //         {item.available ? "Available" : "Not Available"}
-              //       </Badge>
+              //       </Badge> */}
+              //     </div>
+              //     <div className="flex flex-col gap-3">
+              //       <Typography
+              //         variant="small"
+              //         color="gray"
+              //         className="font-normal truncate opacity-75"
+              //       >
+              //         {item.description}
+              //       </Typography>
+
+              //       <Typography
+              //         variant="small"
+              //         color="gray"
+              //         className="font-normal truncate opacity-75 flex gap-2 items-center text-base"
+              //       >
+              //         <MapPin className="h-5 w-5" />
+              //         {item.currently_in}, Nepal
+              //       </Typography>
+              //       <Typography
+              //         variant="small"
+              //         color="gray"
+              //         className="font-normal truncate opacity-75 flex gap-2 items-center text-base"
+              //       >
+              //         <Globe className="h-5 w-5" />
+              //         {item.language}
+              //       </Typography>
               //     </div>
               //   </CardBody>
               //   <CardFooter className="pt-0">
-              //     <Link href={`/guide/${item.id}`}>
-              //       <Button
-              //         size="lg"
-              //         fullWidth={true}
-              //         className="hover:bg-orange/70 w-full mt-3"
-              //       >
-              //         Explore
-              //       </Button>
-              //     </Link>
+              //     <Button
+              //       ripple={false}
+              //       fullWidth={true}
+              //       className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:bg-gray-200 focus:scale-105 focus:shadow-none active:scale-100"
+              //     >
+              //       Explore
+              //     </Button>
               //   </CardFooter>
               // </Card>
               <Card className="">
-                <CardHeader shadow={false} floated={false} className="h-64">
+                <CardHeader shadow={false} floated={false} className=" h-72">
                   <img
                     src={item.image}
                     alt="card-image"
                     className="h-full w-full object-cover"
                   />
                 </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
+                <CardBody className="pt-4">
+                  <div className="mb-1 flex items-center justify-between">
                     <Typography color="blue-gray" className="font-medium">
-                      {item.name}, {item.currently_in}
+                      {item.name}
                     </Typography>
-                    <Typography color="blue-gray" className="font-medium relative">
-                      <span className="absolute top-0 text-sm">$</span>{item.fee}/h
+                    <Typography color="blue-gray" className="font-medium">
+                      ${item.fee}.00
                     </Typography>
-                    {/* <Badge
-                      className={`${
-                        item.available ? "bg-green-600" : "bg-red-600"
-                      } px-1`}
-                    >
-                      {item.available ? "Available" : "Not Available"}
-                    </Badge> */}
                   </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal truncate opacity-75"
-                  >
-                    {item.description}
-                  </Typography>
+                  <div className="flex flex-col gap-1 mt-2">
+                    <Typography
+                      variant="small"
+                      color="gray"
+                      className="font-normal truncate opacity-75 flex gap-1 items-center text-base"
+                    >
+                      <MapPin className="h-5 w-5" />
+                      {item.currently_in}, Nepal
+                    </Typography>
+                    <Typography
+                      variant="small"
+                      color="gray"
+                      className="font-normal truncate opacity-75 flex gap-1 items-center text-base"
+                    >
+                      <Globe className="h-5 w-5" />
+                      {item.language}
+                    </Typography>
+                  </div>
                 </CardBody>
                 <CardFooter className="pt-0">
-                  <Button
-                    ripple={false}
-                    fullWidth={true}
-                    className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                  >
-                    Add to Cart
-                  </Button>
+                  <Link href={`/guide/${item.id}`}>
+                    <Button
+                      ripple={false}
+                      fullWidth={true}
+                      className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:bg-gray-200 focus:scale-105 focus:shadow-none active:scale-100 w-full"
+                    >
+                      Explore
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             );
